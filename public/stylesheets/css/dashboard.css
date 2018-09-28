@@ -1,0 +1,19 @@
+body .Dashboard input, body .Dashboard textarea, body .Dashboard label, body .Dashboard select {
+  margin: 5px 10vw;
+  width: 60vw; }
+
+body .Dashboard button {
+  border: none;
+  position: relative; }
+
+body .Dashboard .header-text {
+  text-align: center;
+  background-color: pink; }
+
+body .addSection {
+  width: 80vw;
+  margin: 10px 10vw;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: whitesmoke;
+  text-align: center; }

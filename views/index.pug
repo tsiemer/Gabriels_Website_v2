@@ -1,5 +1,14 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+    div(class="Main")
+        include ./Navbar
+        div(class="gabriel_Background")
+            include ./Intro
+            include ./about-me
+            include ./current-thoughts
+            include ./done-and-doing
+        div(class="blue_Background")
+            include ./food-for-thought
+            include ./my-system
+            include ./contact-me

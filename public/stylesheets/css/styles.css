@@ -1,0 +1,481 @@
+@import url("https://fonts.googleapis.com/css?family=Sue+Ellen+Francisco");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Oxygen+Mono");
+@import url("https://fonts.googleapis.com/css?family=Chivo:900");
+@media screen and (max-width: 600px) {
+  .Content_Block {
+    max-width: 80vw;
+    margin: 0px 10vw 0px 10vw; }
+    .Content_Block .content_blocks {
+      display: flex;
+      flex-wrap: wrap; }
+    .Content_Block .info_section {
+      order: 2;
+      width: 80vw; }
+      .Content_Block .info_section .description {
+        max-width: 80vw; }
+    .Content_Block .content_block_image {
+      flex: 1;
+      width: 80vw;
+      height: 80vw; } }
+
+.About_Me {
+  background-color: #EEEEEE;
+  height: auto;
+  padding-bottom: 50px; }
+  .About_Me .Content_Block {
+    max-width: 60vw;
+    height: auto;
+    margin: 0px 20vw 0px 20vw;
+    padding: 15px 0px;
+    display: flex;
+    flex-wrap: wrap; }
+    .About_Me .Content_Block .info_section {
+      flex: 2; }
+    .About_Me .Content_Block .header_link {
+      font-size: 24px;
+      line-height: 35px;
+      text-align: left; }
+    .About_Me .Content_Block .subtitle {
+      color: #333;
+      text-align: left; }
+    .About_Me .Content_Block .description {
+      color: #555555;
+      font-size: 15px;
+      line-height: 22px;
+      text-align: left;
+      max-width: 38vw; }
+      .About_Me .Content_Block .description-noImg {
+        text-align: center;
+        line-height: 28px;
+        font-size: 18px;
+        padding: 0px 0px 30px 0px; }
+    .About_Me .Content_Block .content_block_image {
+      flex: 1;
+      width: 20vw;
+      height: 20vw;
+      margin-right: 40px; }
+
+@media screen and (max-width: 600px) {
+  .Content_Block {
+    max-width: 80vw;
+    margin: 0px 10vw 0px 10vw; }
+    .Content_Block .content_blocks {
+      display: flex;
+      flex-wrap: wrap; }
+    .Content_Block .info_section {
+      order: 2;
+      width: 80vw; }
+      .Content_Block .info_section .description {
+        max-width: 80vw; }
+    .Content_Block .content_block_image {
+      flex: 1;
+      width: 80vw;
+      height: 80vw; } }
+
+.Done_And_Doing {
+  background-color: #EEEEEE;
+  height: auto;
+  padding-bottom: 50px; }
+  .Done_And_Doing .Content_Block {
+    max-width: 60vw;
+    height: auto;
+    margin: 0px 20vw 0px 20vw;
+    padding: 15px 0px;
+    display: flex;
+    flex-wrap: wrap; }
+    .Done_And_Doing .Content_Block .info_section {
+      flex: 2; }
+    .Done_And_Doing .Content_Block .header_link {
+      font-size: 24px;
+      line-height: 35px;
+      text-align: left; }
+    .Done_And_Doing .Content_Block .subtitle {
+      color: #333;
+      text-align: left; }
+    .Done_And_Doing .Content_Block .description {
+      color: #555555;
+      font-size: 15px;
+      line-height: 22px;
+      text-align: left;
+      max-width: 38vw; }
+      .Done_And_Doing .Content_Block .description-noImg {
+        text-align: center;
+        line-height: 28px;
+        font-size: 18px;
+        padding: 0px 0px 30px 0px; }
+    .Done_And_Doing .Content_Block .content_block_image {
+      flex: 1;
+      width: 20vw;
+      height: 20vw;
+      margin-right: 40px; }
+
+form {
+  width: 100%; }
+  form input, form textarea {
+    width: 100%;
+    margin: 0px; }
+
+body {
+  margin: 0px;
+  padding: 0px; }
+
+.Main {
+  z-index: inherit 1010;
+  width: 100vw;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  text-align: center; }
+
+.gabriel_Background {
+  background-image: url("../../images/gabriel_head_shot.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translateX(0px) scale(1.02); }
+
+.blue_Background {
+  background-image: url("../../images/blue_background.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translateX(0px) scale(1.02); }
+
+.title {
+  display: inline-flex;
+  margin-top: 80px; }
+
+.big-title {
+  color: #333;
+  padding: 5px;
+  font-weight: bolder; }
+
+.secondary-big-title {
+  color: white;
+  padding: 5px;
+  font-weight: bolder; }
+
+.main_hr {
+  width: 70px;
+  height: 1px;
+  background-color: #333;
+  color: #333;
+  border: solid #333 0.7px;
+  margin-top: 38px; }
+
+.contact-me-hr {
+  margin-top: 38px; }
+
+.secondary_hr {
+  width: 70px;
+  height: 1px;
+  background-color: white;
+  color: white;
+  border: solid white 0.7px;
+  margin-top: 38px; }
+
+.btns-container {
+  width: 100%;
+  text-align: center; }
+  .btns-container .back-button {
+    position: relative;
+    margin: 0px 10px;
+    background-color: #4277C6;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.2s; }
+    .btns-container .back-button:hover {
+      background-color: #333;
+      text-decoration: none;
+      color: white; }
+  .btns-container .page-link {
+    margin: 0px 10px;
+    border: solid 1px #4277C6;
+    padding: 10px; }
+
+.Content_Block {
+  max-width: 60vw;
+  height: auto;
+  margin: 0px 20vw 0px 20vw;
+  padding: 15px 0px;
+  display: flex;
+  flex-wrap: wrap; }
+  .Content_Block .info_section {
+    flex: 2; }
+  .Content_Block .header_link {
+    font-size: 24px;
+    line-height: 35px;
+    text-align: left; }
+  .Content_Block .description {
+    color: #555555;
+    font-size: 15px;
+    line-height: 22px;
+    text-align: left;
+    max-width: 38vw; }
+  .Content_Block .content_block_image {
+    flex: 1;
+    width: 20vw;
+    height: 20vw; }
+
+.ContactMe {
+  background-color: whitesmoke;
+  padding: 0px 20px 40px 20px; }
+  .ContactMe .contact_me_p {
+    color: #697686; }
+  .ContactMe .contact_me_a {
+    color: #4277C6; }
+  .ContactMe .social_image {
+    width: 100px;
+    height: auto; }
+  .ContactMe .DrSuessQuote {
+    font-family: 'Sue Ellen Francisco', cursive;
+    font-size: 50px; }
+
+body .Dashboard input, body .Dashboard textarea, body .Dashboard label, body .Dashboard select {
+  margin: 5px 10vw;
+  width: 60vw; }
+
+body .Dashboard button {
+  border: none;
+  position: relative; }
+
+body .Dashboard .header-text {
+  text-align: center;
+  background-color: pink; }
+
+body .addSection {
+  width: 80vw;
+  margin: 10px 10vw;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: whitesmoke;
+  text-align: center; }
+
+@media screen and (max-width: 750px) {
+  .Content_Block {
+    max-width: 80vw !important;
+    margin: 0px 10vw 0px 10vw !important; }
+    .Content_Block .content_blocks {
+      display: flex;
+      flex-wrap: wrap; }
+    .Content_Block .info_section {
+      order: 2;
+      width: 80vw !important; }
+      .Content_Block .info_section .description {
+        max-width: 80vw !important; }
+  .pinterest-container {
+    max-height: 650px;
+    width: 90vw;
+    margin: 0px auto;
+    overflow: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    column-count: 3; }
+    .pinterest-container .pinterest-grid {
+      margin: 5px; }
+      .pinterest-container .pinterest-grid .grid-img {
+        margin: 5px;
+        flex: 1 0 auto;
+        width: 250px;
+        max-width: 250px;
+        position: relative; } }
+
+.FoodForThought {
+  background-color: whitesmoke;
+  padding-bottom: 60px; }
+  .FoodForThought .pinterest-container {
+    padding-left: 50px;
+    max-height: 700px;
+    width: 90vw;
+    margin: 0px auto;
+    overflow: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start; }
+    .FoodForThought .pinterest-container .pinterest-grid .grid-img {
+      margin: 5px;
+      flex: 1 0 auto;
+      width: 250px;
+      max-width: 250px;
+      position: relative; }
+
+.Intro {
+  color: #333;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  padding-top: 25vh;
+  height: 100vh; }
+  .Intro .intro-small-text {
+    color: #333;
+    font-size: 26px;
+    line-height: 38px;
+    font-style: italic; }
+  .Intro .big-intro {
+    display: inline-flex; }
+  .Intro .Intro_Title {
+    font-family: 'Oxygen Mono', monospace; }
+  .Intro .intro-big-text {
+    color: #333;
+    font-size: 59px;
+    line-height: 70px;
+    padding: 0px 10px; }
+  .Intro .intro-hr {
+    width: 80px;
+    color: #333;
+    background-color: #333;
+    border: solid #333 1px;
+    margin-top: 50px; }
+
+.Login {
+  width: 80vw;
+  padding-left: 20vw;
+  background-color: transparent; }
+  .Login .Login_Form {
+    background-color: white; }
+
+.My_System {
+  min-height: auto;
+  font-family: 'Chivo', sans-serif; }
+  .My_System .my_system_list {
+    width: 60vw;
+    margin: 0px 20vw;
+    padding: 40px 0px;
+    color: white; }
+    .My_System .my_system_list .system_list_text {
+      font-size: 20px;
+      line-height: 38px;
+      font-weight: 400;
+      text-transform: uppercase; }
+
+@media screen and (max-width: 600px) {
+  .Content_Block {
+    max-width: 80vw;
+    margin: 0px 10vw 0px 10vw; }
+    .Content_Block .content_blocks {
+      display: flex;
+      flex-wrap: wrap; }
+    .Content_Block .info_section {
+      order: 2;
+      width: 80vw; }
+      .Content_Block .info_section .description {
+        max-width: 80vw; }
+    .Content_Block .content_block_image {
+      flex: 1;
+      width: 80vw;
+      height: 80vw; } }
+
+.MyThoughts {
+  width: 100vw;
+  min-height: 600px;
+  background-color: whitesmoke;
+  padding-bottom: 50px; }
+  .MyThoughts .my_thoughts_content {
+    display: flex; }
+  .MyThoughts .Content_Block {
+    max-width: 60vw;
+    height: auto;
+    margin: 0px 20vw 0px 20vw;
+    padding: 15px 0px;
+    display: flex;
+    flex-wrap: wrap; }
+    .MyThoughts .Content_Block .info_section {
+      flex: 2;
+      padding-right: 20px; }
+    .MyThoughts .Content_Block .header_link {
+      font-size: 24px;
+      line-height: 35px;
+      text-align: left; }
+    .MyThoughts .Content_Block .subtitle {
+      color: #333;
+      text-align: left; }
+    .MyThoughts .Content_Block .description {
+      color: #555555;
+      font-size: 15px;
+      line-height: 22px;
+      text-align: left;
+      max-width: 38vw; }
+      .MyThoughts .Content_Block .description-noImg {
+        text-align: center;
+        line-height: 28px;
+        font-size: 18px;
+        padding: 0px 0px 30px 0px; }
+    .MyThoughts .Content_Block .content_block_image {
+      flex: 1;
+      width: 20vw;
+      height: 20vw;
+      margin-right: 40px; }
+
+.MyThoughtsEdit {
+  background-color: black; }
+  .MyThoughtsEdit .myThoughtsContainer {
+    max-width: 80vw;
+    height: 330px;
+    margin: 0px 10vw; }
+  .MyThoughtsEdit .myThoughtsEditForm {
+    padding: 15px 5vw; }
+
+.Projects_Index {
+  background-color: whitesmoke;
+  padding: 20px 20vw;
+  height: 100vh; }
+  .Projects_Index .content_blocks {
+    height: 70vh;
+    padding: 20px; }
+    .Projects_Index .content_blocks .Project_Cont .Title_Link {
+      color: black;
+      cursor: pointer;
+      text-decoration: none; }
+
+.Project_Details {
+  padding: 20px 20vw; }
+
+@media screen and (max-width: 750px) {
+  .navbar {
+    position: absolute;
+    background-color: transparent !important;
+    display: block !important;
+    z-index: 10; }
+    .navbar .navbar_btn {
+      z-index: 20;
+      border: none;
+      outline: none;
+      background-color: #333333;
+      color: white;
+      border-radius: 2px;
+      position: fixed;
+      left: 20px;
+      top: 10px; }
+    .navbar .navbar_list {
+      background-color: white !important;
+      width: 100vw;
+      position: fixed;
+      left: 0px;
+      top: 0px; }
+    .navbar .navlink_list {
+      padding-top: 50px;
+      text-align: left; }
+      .navbar .navlink_listp, .navbar .navlink_list a {
+        padding-left: 30px;
+        color: #666666;
+        text-decoration: none;
+        font-weight: lighter; } }
+
+.navbar {
+  position: absolute !important;
+  display: none;
+  background-color: transparent;
+  z-index: 10; }
+  .navbar .navbar_btn {
+    background-color: transparent;
+    background-color: #333;
+    color: white;
+    outline: none;
+    border: none; }

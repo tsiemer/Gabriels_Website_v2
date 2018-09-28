@@ -1,0 +1,58 @@
+$navbar_hr_color:#EEEEEE;
+$navbar_hr_width: 100%;
+
+@media screen and (max-width:750px) {
+    .navbar {
+        position:absolute;
+        background-color:transparent !important;
+        display:block !important;
+        z-index:10;
+
+        .navbar_btn {
+            z-index:20;
+            border:none;
+            outline:none;
+            background-color:#333333;
+            color:white;
+            border-radius:2px;
+            position:fixed;
+            left:20px;
+            top:10px;
+        }
+
+        .navbar_list{
+            background-color:white !important;
+            width:100vw;
+            position:fixed;
+            left:0px;
+            top:0px;
+        }
+
+        .navlink_list {
+            padding-top:50px;
+            text-align:left;
+
+            &p, a{
+                padding-left:30px;
+                color:#666666;
+                text-decoration: none;
+                font-weight:lighter;
+            }
+        }
+    }
+}
+
+.navbar {
+    position:absolute !important;
+    display:none;
+    background-color:transparent;
+    z-index:10;
+
+    .navbar_btn{
+        background-color:transparent;
+        background-color:#333;
+        color:white;
+        outline:none;
+        border:none;
+    }
+}

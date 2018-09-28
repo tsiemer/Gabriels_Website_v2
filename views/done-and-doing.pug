@@ -1,0 +1,41 @@
+extends layout
+
+block content
+    div(class="Done_And_Doing" id="doneAndDoing")
+        div(class="title")
+            hr(class="main_hr")
+            h2(class="big-title") What I have done &amp; What I am doing
+            hr(class="main_hr")
+
+        div(class="content_blocks")
+            - for (let i = 0; i < data.length; i++)
+                - if(data[i].dataValues.blogType === "doneAndDoing")
+                    div(class="Content_Block")
+                        - if(data[i].dataValues.imgUrl !== null)
+                            img(src=`${data[i].dataValues.imgUrl}` class="content_block_image")
+                        div(class="info_section")
+                            h4(class="header_link")
+                                a(href=`${data[i].dataValues.headerLink}`) #{data[i].dataValues.title}
+                            h6(class="subtitle") #{data[i].dataValues.subtitle}
+                            p(class='description-noImg') #{data[i].dataValues.content}
+
+        div(class="btns-container")
+            a(class="Learn_More_Btn" href="/projects/1") Past Projects
+
+
+                                
+            div(class="Content_Block")
+                - if(isConfirmed === true)
+                    form(method="POST" action="/doneAndDoing")
+                        div(class="form-group")
+                            input(type="text" name="blogType" class="form-control hidden" id="blogType" value="doneAndDoing" readonly)
+                        div(class="form-group row")
+                            label(for="title") Title
+                            input(type="text" name="title" class="form-control" id="title" placeholder="Title")
+                        div(class="form-group row")
+                            label(for="content") Content
+                            textarea(type="text" class="form-control" name="content" id="content" placeholder="Content")
+                        div(class="form-group")
+                            label(for="img-url") Image Url
+                            input(type="text" class="form-control" name="imgUrl" id="img-url" placeholder="Image Url")
+                        button(type="submit" class="btn btn-primary") Submit

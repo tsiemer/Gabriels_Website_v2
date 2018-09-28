@@ -1,0 +1,46 @@
+extends layout
+
+block content
+    div(class="MyThoughts" id="myThoughts")
+        div(class="title")
+            hr(class="main_hr")
+            h2(class="big-title") My Thoughts
+            hr(class="main_hr")
+
+        div(class="content_blocks")
+            - for (let i = 0; i < data.length; i++)
+                - if(data[i].dataValues.blogType === "myThoughts")
+                    div(class="Content_Block")
+                        div(class="info_section")
+                            h4(class="header_link")
+                                a(href=`${data[i].dataValues.headerLink}`) #{data[i].dataValues.title}
+                            - if(data[i].dataValues.imgUrl === null)
+                                p(class='description-noImg') #{data[i].dataValues.content}
+                            - if(data[i].dataValues.imgUrl !== null)
+                                img(alt=`${data[i].dataValues.altText}` src=`${data[i].dataValues.imgUrl}` class="content_block_image") 
+                                p(class='description') #{data[i].dataValues.content}
+            div(class="Content_Block")
+                -if(isConfirmed === true)
+                    form(method="POST" action="/myThoughts")
+                        div(class="form-group row")
+                            input(type="text" name="blogType" class="form-control hidden" id="blogType" value="Current-Thoughts" readonly)
+
+                        div(class="form-group row")
+                            div(class="col col-md-6")
+                                label(for="title") Title
+                                input(type="text" name="title" class="form-control" id="title")
+                            div(class="col col-md-6")
+                                label(for="subtitle") Subtitle
+                                input(type="text" class="form-control" name="subtitle" id="subtitle")
+
+                        div(class="form-group row")
+                            div(class="col col-md-12")
+                                label(for="imgUrl") Image Url
+                                input(type="text" class="form-control" name="imgUrl" id="imgUrl")
+
+                        div(class="form-group row")
+                            div(class="col col-md-12")
+                                label(for="content") Content
+                                textarea(type="text" class="form-control" name="content" id="content")
+
+                        button(type="submit" class="btn btn-primary") Submit

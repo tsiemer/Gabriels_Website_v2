@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    div(class="Project_Details")
+        div(class="content_blocks")
+            div(class="Project_Cont")
+                h3(class="Title") #{data.dataValues.title}
+                p(class="Title") #{data.dataValues.subtitle}
+                hr(class="hr_one")
+                p(class="description") #{data.dataValues.description}
+            
+                a(class="back-button" href="/projects/1") Back

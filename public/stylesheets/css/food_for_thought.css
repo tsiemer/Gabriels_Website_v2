@@ -1,0 +1,49 @@
+@media screen and (max-width: 750px) {
+  .Content_Block {
+    max-width: 80vw !important;
+    margin: 0px 10vw 0px 10vw !important; }
+    .Content_Block .content_blocks {
+      display: flex;
+      flex-wrap: wrap; }
+    .Content_Block .info_section {
+      order: 2;
+      width: 80vw !important; }
+      .Content_Block .info_section .description {
+        max-width: 80vw !important; }
+  .pinterest-container {
+    max-height: 650px;
+    width: 90vw;
+    margin: 0px auto;
+    overflow: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    column-count: 3; }
+    .pinterest-container .pinterest-grid {
+      margin: 5px; }
+      .pinterest-container .pinterest-grid .grid-img {
+        flex: 1 0 auto;
+        width: 250px;
+        max-width: 250px;
+        position: relative; } }
+
+.FoodForThought {
+  background-color: #EEEEEE;
+  padding-bottom: 60px; }
+  .FoodForThought .pinterest-container {
+    padding-left: 50px;
+    max-height: 700px;
+    width: 90vw;
+    margin: 0px auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start; }
+      .FoodForThought .pinterest-container .pinterest-grid .grid-img {
+        flex: 1 0 auto;
+        width: 250px;
+        max-width: 250px;
+        position: relative; }

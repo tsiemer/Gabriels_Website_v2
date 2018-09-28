@@ -1,0 +1,106 @@
+$my_thoughts_section_color:whitesmoke;
+$my_thoughts_section_height:600px;
+$description_color:#555555;
+$description_size:15px;
+$subtitle_color:#333;
+
+
+@media screen and (max-width:600px) {
+    .Content_Block {
+        max-width: 80vw;
+        margin:0px 10vw 0px 10vw;
+        .content_blocks {
+            display:flex;
+            flex-wrap:wrap;
+        }
+        .info_section {
+            order:2;
+            width:80vw;
+
+            .description {
+                max-width:80vw;
+
+                
+            }
+            
+        }
+
+        .content_block_image{
+            flex:1;
+            width:80vw;
+            height:80vw;
+        }
+    }
+}
+
+
+.MyThoughts {
+    width:100vw;
+    min-height:$my_thoughts_section_height;
+    background-color: $my_thoughts_section_color;
+    padding-bottom:50px;
+
+    .my_thoughts_content {
+        display:flex;
+    }    
+    .Content_Block {
+        max-width:60vw;
+        height:auto;
+        margin:0px 20vw 0px 20vw;
+        padding:15px 0px;
+        display:flex;
+        flex-wrap:wrap;
+        
+
+        .info_section {
+            flex:2;
+            padding-right:20px;
+        }
+
+        .header_link {
+            font-size:24px;
+            line-height:35px;
+            text-align:left;
+        }
+
+        .subtitle {
+            color: $subtitle_color;
+            text-align:left;
+        }
+
+        .description{
+            color:$description_color;
+            font-size:$description_size;
+            line-height: 22px;
+            text-align:left;
+            max-width:38vw;
+
+
+            &-noImg{
+                text-align:center;
+                line-height:28px;
+                font-size:18px;
+                padding:0px 0px 30px 0px;
+            }
+        }
+
+        .content_block_image{
+            flex:1;
+            width:20vw;
+            height:20vw;
+            margin-right:40px;
+        }
+    }
+}
+
+.MyThoughtsEdit{
+    background-color:black;
+    .myThoughtsContainer{
+        max-width:80vw;
+        height:330px;
+        margin:0px 10vw;
+    }
+    .myThoughtsEditForm{
+        padding:15px 5vw;
+    }
+}

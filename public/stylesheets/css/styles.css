@@ -233,6 +233,10 @@ body {
   .ContactMe .DrSuessQuote {
     font-family: 'Sue Ellen Francisco', cursive;
     font-size: 50px; }
+  .ContactMe .sign-marker {
+    position: absolute;
+    bottom: 10px;
+    left: 50px; }
 
 body .Dashboard input, body .Dashboard textarea, body .Dashboard label, body .Dashboard select {
   margin: 5px 10vw;

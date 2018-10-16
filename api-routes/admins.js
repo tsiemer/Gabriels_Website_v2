@@ -2,6 +2,8 @@
 var passport = require('passport');
 // var helpers = require('./route_helpers');
 
+// These routes pass information from the database to front end.
+
 module.exports = function(app, db) {
     app.get('/admins', (req, res, next) => {
         db.Admin.findAll({

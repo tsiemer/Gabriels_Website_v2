@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 
-//style paths
+//style paths * don't touch this.
 var sassFiles = 'public/stylesheets/scss/**/*.scss',
     cssDest = 'public/stylesheets/css/';
 

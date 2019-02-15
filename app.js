@@ -23,6 +23,7 @@ app.set('view engine', 'pug');
 
 // // uncomment after placing your favicon in /public
 // //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+
 app.use((req, res, next) => {
     if (req.headers['x-forwarded-proto'] === 'http') {
         const sslUrl = `https://${req.hostname}${req.originalUrl}`;
@@ -32,8 +33,8 @@ app.use((req, res, next) => {
     }
 });
 
-app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -48,7 +49,7 @@ var options = {
 var sessionStore = new MySQLStore(options)
 
 app.use(session({
-    secret: 'Gabriel is my bestfriend',
+    secret: 'This app is awesome!',
     resave: false,
     store: sessionStore,
     saveUninitialized: false
@@ -62,37 +63,57 @@ app.use(function (req, res, next) {
     next();
 })
 
+app.use( async (req, res, next) => {
+    if (req.isAuthenticated()) {
+        let adminDetails = db.Admin.findOne({
+            where: {
+                id: req.session.passport.user
+            }
+        })
+    
+        if (!!adminDetails) res.locals.accountName = `${adminDetails.dataValues.username}`
+    }
+    
+    next();
+});
+
 app.use('/', indexRoute);
 app.use('/', authRoutes);
 apiRoutes(app, db)
 
-
-passport.use('admin', new LocalStrategy(
-    function (username, password, done) {
-        db.Admin.findOne({
+passport.use('adminRoute', new LocalStrategy(
+    async function (username, password, done) {
+        console.log
+        const adminDetails = await db.Admin.findOne({
             where: {
-                username: username
+                username
             }
-        }).then(function (result, err, fields) {
-            if (err) {
-                done(err)
-            } else if (!result || result === 0) {
-                done(null, false)
-            } else {
-                var hash = result.dataValues.password;
-                bcrypt.compare(password, hash, function (err, response) {
-                    if (response === true && result.dataValues.isConfirmed === true) {
-                        var id = result.dataValues.id;
-                        return done(null, id)
-                    } else {
-                        return done(null, false);
-                    }
-                })
-            }
-
         })
+
+        if (!adminDetails) {
+            done(null, false)
+        } else {
+            const hash = adminDetails.dataValues.password;
+            bcrypt.compare(password, hash, (err, response) => {
+                console.log(response)
+                if (response) {
+                    const user_id = adminDetails.dataValues.id;
+                    return done(null, user_id);
+                } else {
+                    return done(null, false);
+                }
+            })
+        }
     }
 ));
+
+passport.serializeUser(function(user_id, done) {
+    done(null, user_idx);
+});
+  
+passport.deserializeUser(function(user, done) {
+    done(err, user);
+});
 
 
 // catch 404 and forward to error handler
@@ -104,9 +125,6 @@ app.use(function (req, res, next) {
 
 // error handler
 app.use(function (err, req, res, next) {
-    // set locals, only providing error in development
-    // res.locals.message = err.message;
-    // res.locals.error = req.app.get('env') === 'development' ? err : {};
     res.render('error', {Message: err.message, errorStatus: err.status || 404});
 });
 

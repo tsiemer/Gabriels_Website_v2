@@ -2,8 +2,59 @@
     width:80vw;
     padding-left:20vw;
     background-color:transparent;
-
+   
     .Login_Form {
         background-color:white;
+    }
+}
+.loginBackgroundImage{
+    background-image: url("../../images/Login-Background-Image.jpeg");
+    background-size:cover;
+    background-repeat:no-repeat;
+    height:100vh;
+}
+
+
+.loginContainer{    
+    background-color:#5c6175;
+    color: white;
+    width:650px;
+    padding:100px 50px;
+    
+    margin:0px auto;
+    margin-top:15vh;
+
+    .center{
+        text-align:center;
+    }
+
+    .loginHeader{
+        padding-bottom:50px;
+    }
+
+    .loginBtnContainer{
+        margin-top:50px;
+
+        .submitBtn{
+            padding:12px 150px;
+            margin:0px auto;
+            background-color:#8187b1;
+            color:white;
+            font-size:15px;
+            border-radius:0px;
+            transition:.5s;
+    
+            &:hover{
+                background-color: lighten(#8187b1, 6);
+                color: lighten(white, 2);
+            }
+            
+        }
+    }
+
+    input{
+        border-radius:0px;
+        border:0px;
+        border-bottom:1px solid #e9e9e9;
     }
 }

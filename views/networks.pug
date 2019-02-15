@@ -1,0 +1,23 @@
+extends layout
+
+block content
+    .sidebarContainer
+        include ./sidebar
+    .networksImageHeader.center
+        p.lightHeader All Networks
+    .Container
+        .cardsContainer
+            .networkContainer
+                form(action="/networkSearch" method="POST").form-group
+                    input(class="inputStyleOne" name="search" type="text" placeholder="Search by Client Name")
+                    button(type="submit" class="secondaryBtn") Search
+                - for (let i = 0; i < networkDetails.length; i++)
+                    hr
+                    .inlineFlex
+                        a.networkDetails(href=`/networks/${networkDetails[i].dataValues.id}`) #{networkDetails[i].dataValues.clientName}
+                        p.networkDetails #{networkDetails[i].dataValues.businessName}
+                        p.networkDetails #{networkDetails[i].dataValues.roleAtBusiness}
+                        p.networkDetails #{networkDetails[i].dataValues.phone}
+                        p.networkDetails #{networkDetails[i].dataValues.email}
+                        p.networkDetails #{networkDetails[i].dataValues.notes}
+                    

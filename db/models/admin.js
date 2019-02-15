@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false
     },
 
-    isConfirmed: {
+    isAuthenticated: {
       type: DataTypes.BOOLEAN,
       defaultValue: false
     }

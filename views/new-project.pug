@@ -1,0 +1,23 @@
+extends layout
+
+block content
+    .sidebarContainer
+        include ./sidebar
+    .projectsHeaderImage.center
+        p.headerText  Create New Project
+    .Container
+        .cardsContainer
+            .flexNetworkContainer
+                .column.f-2
+                    .networkDetails
+                        form( method="POST" action="/networks/createNew")
+                            .flexContainer
+                                input(class="inputStyleOne" name="title" type="text" placeholder="Business Name")
+                            .flexContainer
+                                input(class="inputStyleOne" name="subtitle" type="text" placeholder="Short Description")
+                                input(class="inputStyleOne" name="description" type="text" placeholder="Description")
+                            .flexContainer
+                                input(class="inputStyleOne" name="imgUrl" type="text" placeholder="Image Url")
+                            button(type="submit" class="submitBtn") Create
+                .column
+                    p.cursiveWriting It always seems impossible till its done.

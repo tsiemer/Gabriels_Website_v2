@@ -1,0 +1,7 @@
+        .modal.fade(id="deleteModal" tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+            .modal-dialog(role='document')
+                .modal-content
+                    p.extendedText.blogDetailsContent Are you sure you want to delete this?
+                    .modal-footer
+                        a.smallSubmitBtn(href=`/delete/${blogDetails[i].dataValues.id}`) Delete
+                        button.smallCancelBtn(type='button', data-dismiss='modal') Cancel

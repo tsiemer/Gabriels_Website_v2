@@ -1,0 +1,43 @@
+.networksImageHeader{
+    background-image: url("../../images/Networking-Event.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+
+    padding:100px 0px 100px 300px;
+
+}
+
+
+.networkContainer{
+    width:80vw;
+    margin-top:50px;
+    
+    .networkDetails{
+        color:#333;
+        padding:0px 10px;
+        border-right:solid 1px #333;
+
+        a, button {
+            width:100%;
+        }
+    }
+
+    .inlineFlex{
+        display:flex;
+    }
+}
+
+.flexNetworkContainer{
+    display:flex;
+    flex-wrap:wrap;
+    padding:40px;
+
+    p, div {
+        flex:1;
+    }
+
+    .f-2{
+        flex:2;
+    }
+}

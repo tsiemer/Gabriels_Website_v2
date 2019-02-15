@@ -1,0 +1,73 @@
+extends layout
+
+block content
+    .sidebarContainer
+        include ./sidebar
+    .dashboardImageHeader.center
+        p.headerText All Blogs
+    .Container
+        .cardsContainer
+            .editsContainer.purple
+                .aboutMeForm
+                    h3.headerText About Me
+                    - for (let i = 0; i < blogDetails.length; i++)
+                        - if(blogDetails[i].dataValues.blogType === "aboutMe")
+                            p
+                                p.inlineFlex #{blogDetails[i].dataValues.title}
+                                    a(href=`/delete/${blogDetails[i].dataValues.id}`)
+                                        i(class="fa fa-trash" aria-hidden="true")
+                                    a(href=`/blogs/${blogDetails[i].dataValues.id}`)
+                                        i(class="fa fa-pencil" aria-hidden="true")
+
+            .editsContainer
+                p.extendedText Edit or Remove past Blogs Here!
+
+            .editsContainer.red
+                .myThoughtsForm
+                    h3.headerText My Thoughts
+                    - for (let i = 0; i < blogDetails.length; i++)
+                        - if(blogDetails[i].dataValues.blogType === "myThoughts")
+                            p
+                                p.inlineFlex #{blogDetails[i].dataValues.title}
+                                    a(href=`/delete/${blogDetails[i].dataValues.id}`)
+                                        i(class="fa fa-trash" aria-hidden="true")
+                                    a(href=`/blogs/${blogDetails[i].dataValues.id}`)
+                                        i(class="fa fa-pencil" aria-hidden="true")
+
+            .editsContainer.grey
+                .projectsBoardForm
+                    h3.headerText Projects Board
+                    - for (let i = 0; i < blogDetails.length; i++)
+                        - if(blogDetails[i].dataValues.blogType === "doneAndDoing")
+                            p
+                                p.inlineFlex #{blogDetails[i].dataValues.title}
+                                    a(href=`/delete/${blogDetails[i].dataValues.id}`)
+                                        i(class="fa fa-trash" aria-hidden="true")
+                                    a(href=`/blogs/${blogDetails[i].dataValues.id}`)
+                                        i(class="fa fa-pencil" aria-hidden="true")
+
+            .editsContainer.green
+                .myInterestsForm
+                    h3.headerText My Interests
+                    - for (let i = 0; i < blogDetails.length; i++)
+                        - if(blogDetails[i].dataValues.blogType === "foodForThought")
+                            p
+                                p.inlineFlex #{blogDetails[i].dataValues.title}
+                                    a(href=`/delete/${blogDetails[i].dataValues.id}`)
+                                        i(class="fa fa-trash" aria-hidden="true")
+                                    a(href=`/blogs/${blogDetails[i].dataValues.id}`)
+                                        i(class="fa fa-pencil" aria-hidden="true")
+                    
+
+            .editsContainer.darkblue
+                .inspiringQuotesForm
+                    h3.headerText Inspiring Quotes
+                    - for (let i = 0; i < blogDetails.length; i++)
+                        - if(blogDetails[i].dataValues.blogType === "wayIDoThings")
+                            p
+                                p.inlineFlex #{blogDetails[i].dataValues.quote}
+                                    a(href=`/delete/${blogDetails[i].dataValues.id}`)
+                                        i(class="fa fa-trash fa-md" aria-hidden="true")
+
+            .center
+                p.alert.alert-danger Warning! there is no confirmation on the trash icon.

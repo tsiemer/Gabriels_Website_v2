@@ -110,154 +110,6 @@
       height: 20vw;
       margin-right: 40px; }
 
-form {
-  width: 100%; }
-  form input, form textarea {
-    width: 100%;
-    margin: 0px; }
-
-body {
-  margin: 0px;
-  padding: 0px; }
-
-.Main {
-  z-index: inherit 1010;
-  width: 100vw;
-  height: 100vh;
-  font-family: "Roboto", sans-serif;
-  text-align: center; }
-
-.gabriel_Background {
-  background-image: url("../../images/gabriel_head_shot.jpg");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  transform: translateX(0px) scale(1.02); }
-
-.blue_Background {
-  background-image: url("../../images/blue_background.png");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  transform: translateX(0px) scale(1.02); }
-
-.title {
-  display: inline-flex;
-  margin-top: 80px; }
-
-.big-title {
-  color: #333;
-  padding: 5px;
-  font-weight: bolder; }
-
-.secondary-big-title {
-  color: white;
-  padding: 5px;
-  font-weight: bolder; }
-
-.main_hr {
-  width: 70px;
-  height: 1px;
-  background-color: #333;
-  color: #333;
-  border: solid #333 0.7px;
-  margin-top: 38px; }
-
-.contact-me-hr {
-  margin-top: 38px; }
-
-.secondary_hr {
-  width: 70px;
-  height: 1px;
-  background-color: white;
-  color: white;
-  border: solid white 0.7px;
-  margin-top: 38px; }
-
-.btns-container {
-  width: 100%;
-  text-align: center; }
-  .btns-container .back-button {
-    position: relative;
-    margin: 0px 10px;
-    background-color: #4277C6;
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    transition: 0.2s; }
-    .btns-container .back-button:hover {
-      background-color: #333;
-      text-decoration: none;
-      color: white; }
-  .btns-container .page-link {
-    margin: 0px 10px;
-    border: solid 1px #4277C6;
-    padding: 10px; }
-
-.Content_Block {
-  max-width: 60vw;
-  height: auto;
-  margin: 0px 20vw 0px 20vw;
-  padding: 15px 0px;
-  display: flex;
-  flex-wrap: wrap; }
-  .Content_Block .info_section {
-    flex: 2; }
-  .Content_Block .header_link {
-    font-size: 24px;
-    line-height: 35px;
-    text-align: left; }
-  .Content_Block .description {
-    color: #555555;
-    font-size: 15px;
-    line-height: 22px;
-    text-align: left;
-    max-width: 38vw; }
-  .Content_Block .content_block_image {
-    flex: 1;
-    width: 20vw;
-    height: 20vw; }
-
-.ContactMe {
-  background-color: whitesmoke;
-  padding: 0px 20px 40px 20px; }
-  .ContactMe .contact_me_p {
-    color: #697686; }
-  .ContactMe .contact_me_a {
-    color: #4277C6; }
-  .ContactMe .social_image {
-    width: 100px;
-    height: auto; }
-  .ContactMe .DrSuessQuote {
-    font-family: 'Sue Ellen Francisco', cursive;
-    font-size: 50px; }
-  .ContactMe .sign-marker {
-    position: absolute;
-    bottom: 10px;
-    left: 50px; }
-
-body .Dashboard input, body .Dashboard textarea, body .Dashboard label, body .Dashboard select {
-  margin: 5px 10vw;
-  width: 60vw; }
-
-body .Dashboard button {
-  border: none;
-  position: relative; }
-
-body .Dashboard .header-text {
-  text-align: center;
-  background-color: pink; }
-
-body .addSection {
-  width: 80vw;
-  margin: 10px 10vw;
-  padding: 5px;
-  border-radius: 5px;
-  background-color: whitesmoke;
-  text-align: center; }
-
 @media screen and (max-width: 750px) {
   .Content_Block {
     max-width: 80vw !important;
@@ -288,7 +140,10 @@ body .addSection {
         flex: 1 0 auto;
         width: 250px;
         max-width: 250px;
-        position: relative; } }
+        position: relative; }
+      .pinterest-container .pinterest-grid .header-link {
+        position: relative;
+        top: 50%; } }
 
 .FoodForThought {
   background-color: whitesmoke;
@@ -310,6 +165,24 @@ body .addSection {
       width: 250px;
       max-width: 250px;
       position: relative; }
+
+.ContactMe {
+  background-color: whitesmoke;
+  padding: 0px 20px 40px 20px; }
+  .ContactMe .contact_me_p {
+    color: #697686; }
+  .ContactMe .contact_me_a {
+    color: #4277C6; }
+  .ContactMe .social_image {
+    width: 100px;
+    height: auto; }
+  .ContactMe .DrSuessQuote {
+    font-family: 'Sue Ellen Francisco', cursive;
+    font-size: 50px; }
+  .ContactMe .sign-marker {
+    position: absolute;
+    bottom: 10px;
+    left: 50px; }
 
 .Intro {
   color: #333;
@@ -337,13 +210,6 @@ body .addSection {
     background-color: #333;
     border: solid #333 1px;
     margin-top: 50px; }
-
-.Login {
-  width: 80vw;
-  padding-left: 20vw;
-  background-color: transparent; }
-  .Login .Login_Form {
-    background-color: white; }
 
 .My_System {
   min-height: auto;
@@ -426,6 +292,342 @@ body .addSection {
   .MyThoughtsEdit .myThoughtsEditForm {
     padding: 15px 5vw; }
 
+form {
+  width: 100%; }
+  form input, form textarea {
+    width: 100%;
+    margin: 0px; }
+
+.inputStyleOne {
+  width: 60%;
+  height: 50px;
+  background-color: #e9e9e9;
+  border: none;
+  border-bottom: solid 1px #e9e9e9;
+  border-radius: 0px;
+  padding: 0px 10px;
+  margin: 20px 0px; }
+  .inputStyleOne:focus {
+    border-bottom: solid 1px #333; }
+
+body {
+  margin: 0px;
+  padding: 0px; }
+
+.Main {
+  z-index: inherit 1010;
+  width: 100vw;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  text-align: center; }
+
+.messageContainer {
+  padding: 100px 50px;
+  max-width: 800px;
+  max-height: 80vh;
+  margin: 20px auto;
+  text-align: center;
+  background-color: #f5f5f5;
+  color: black; }
+
+.gabriel_Background {
+  background-image: url("../../images/Model-Background-Image-2.jpeg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translateX(0px) scale(1.02); }
+
+.blue_Background {
+  background-image: url("../../images/Royal-Blue-Background.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translateX(0px) scale(1.02); }
+
+.title {
+  display: inline-flex;
+  margin-top: 80px; }
+
+.big-title {
+  color: #333;
+  padding: 5px;
+  font-weight: bolder; }
+
+.secondary-big-title {
+  color: white;
+  padding: 5px;
+  font-weight: bolder; }
+
+.inline {
+  display: inline; }
+
+.inlineFlex {
+  text-align: left;
+  width: 100%; }
+  .inlineFlex a {
+    float: right; }
+
+.flexContainer {
+  display: flex; }
+  .flexContainer div, .flexContainer input {
+    flex: 1;
+    margin-right: 20px; }
+
+.main_hr {
+  width: 70px;
+  height: 1px;
+  background-color: #333;
+  color: #333;
+  border: solid #333 0.7px;
+  margin-top: 38px; }
+
+.contact-me-hr {
+  margin-top: 38px; }
+
+.secondary_hr {
+  width: 70px;
+  height: 1px;
+  background-color: white;
+  color: white;
+  border: solid white 0.7px;
+  margin-top: 38px; }
+
+.btns-container {
+  width: 100%;
+  text-align: center; }
+  .btns-container .back-button {
+    position: relative;
+    margin: 0px 10px;
+    background-color: #4277C6;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.2s; }
+    .btns-container .back-button:hover {
+      background-color: #333;
+      text-decoration: none;
+      color: white; }
+  .btns-container .page-link {
+    margin: 0px 10px;
+    border: solid 1px #4277C6;
+    padding: 10px; }
+
+.btnsContainer {
+  width: 80%; }
+  .btnsContainer .left {
+    margin-left: 60px; }
+  .btnsContainer .right {
+    margin-right: 50px; }
+
+.submitBtn {
+  padding: 12px 150px;
+  margin: 0px auto;
+  background-color: #8187b1;
+  color: white;
+  font-size: 15px;
+  border-radius: 0px;
+  transition: .5s; }
+  .submitBtn:hover {
+    background-color: #9499bd;
+    color: white; }
+
+.secondaryBtn {
+  padding: 12px 80px;
+  margin: 0px auto;
+  background-color: #333;
+  color: white;
+  font-size: 15px;
+  border-radius: 0px;
+  transition: .5s; }
+  .secondaryBtn:hover {
+    background-color: #424242;
+    color: white; }
+  .secondaryBtn:focus {
+    background-color: #424242;
+    color: white; }
+
+.smallSubmitBtn {
+  padding: 12px 50px;
+  margin: 0px auto;
+  background-color: #8187b1;
+  color: white;
+  font-size: 15px;
+  border-radius: 0px;
+  transition: .5s; }
+  .smallSubmitBtn:hover {
+    background-color: #9499bd;
+    color: white; }
+  .smallSubmitBtn:focus {
+    background-color: #9499bd;
+    color: white; }
+
+.smallCancelBtn {
+  padding: 12px 50px;
+  margin: 0px auto;
+  background-color: #f5f5f5;
+  color: black;
+  font-size: 15px;
+  border: 0px;
+  border-radius: 0px;
+  transition: .5s; }
+  .smallCancelBtn:hover {
+    background-color: white;
+    color: #050505; }
+  .smallCancelBtn:focus {
+    background-color: white;
+    color: #050505; }
+
+.extendedText {
+  color: #333;
+  font-size: 20px;
+  letter-spacing: 8px;
+  text-align: center; }
+
+.cursiveWriting {
+  font-family: 'Sacramento', cursive;
+  font-size: 50px;
+  line-height: 120px;
+  max-width: 500px; }
+
+.Content_Block {
+  max-width: 60vw;
+  height: auto;
+  margin: 0px 20vw 0px 20vw;
+  padding: 15px 0px;
+  display: flex;
+  flex-wrap: wrap; }
+  .Content_Block .info_section {
+    flex: 2; }
+  .Content_Block .header_link {
+    font-size: 24px;
+    line-height: 35px;
+    text-align: left; }
+  .Content_Block .description {
+    color: #555555;
+    font-size: 15px;
+    line-height: 22px;
+    text-align: left;
+    max-width: 38vw; }
+  .Content_Block .content_block_image {
+    flex: 1;
+    width: 20vw;
+    height: 20vw; }
+
+.fa-angle-right {
+  color: white;
+  float: right; }
+
+.fa-trash {
+  color: #f5f5f5;
+  text-align: right; }
+
+.fa-pencil {
+  color: #f5f5f5;
+  margin-right: 15px;
+  text-align: right; }
+
+.lightHeader {
+  font-size: 40px;
+  font-weight: 200;
+  color: #333; }
+
+.smallSubheader {
+  font-size: 12px;
+  color: #333;
+  font-style: italic; }
+
+.blogDetailsContent {
+  font-size: 14px;
+  color: #333;
+  padding-top: 40px; }
+
+.dashboardImageHeader {
+  margin-left: 200px;
+  background-image: url("../../images/modelLookingThroughTrees.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .dashboardImageHeader .headerText {
+    padding: 100px 100px;
+    font-size: 50px;
+    color: white; }
+
+.Container {
+  margin-left: 200px; }
+  .Container .cardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px 50px; }
+    .Container .cardsContainer .editsContainer {
+      color: white;
+      border-radius: 10px;
+      max-height: 500px;
+      overflow: scroll;
+      width: 350px;
+      margin: 30px 10px;
+      padding: 50px 30px; }
+      .Container .cardsContainer .editsContainer.purple {
+        background-color: #3b4b7d; }
+      .Container .cardsContainer .editsContainer.red {
+        background-color: #b51a2c; }
+      .Container .cardsContainer .editsContainer.grey {
+        background-color: #aabbcd; }
+      .Container .cardsContainer .editsContainer.green {
+        background-color: #86b872; }
+      .Container .cardsContainer .editsContainer.darkblue {
+        background-color: #374873; }
+      .Container .cardsContainer .editsContainer input, .Container .cardsContainer .editsContainer textarea {
+        border-radius: 0px;
+        border: 0px;
+        border-bottom: 1px solid #e9e9e9;
+        margin: 20px 0px; }
+    .Container .cardsContainer .aboutMeAll {
+      display: none; }
+
+.Login {
+  width: 80vw;
+  padding-left: 20vw;
+  background-color: transparent; }
+  .Login .Login_Form {
+    background-color: white; }
+
+.loginBackgroundImage {
+  background-image: url("../../images/Login-Background-Image.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh; }
+
+.loginContainer {
+  background-color: #5c6175;
+  color: white;
+  width: 650px;
+  padding: 100px 50px;
+  margin: 0px auto;
+  margin-top: 15vh; }
+  .loginContainer .center {
+    text-align: center; }
+  .loginContainer .loginHeader {
+    padding-bottom: 50px; }
+  .loginContainer .loginBtnContainer {
+    margin-top: 50px; }
+    .loginContainer .loginBtnContainer .submitBtn {
+      padding: 12px 150px;
+      margin: 0px auto;
+      background-color: #8187b1;
+      color: white;
+      font-size: 15px;
+      border-radius: 0px;
+      transition: .5s; }
+      .loginContainer .loginBtnContainer .submitBtn:hover {
+        background-color: #9499bd;
+        color: white; }
+  .loginContainer input {
+    border-radius: 0px;
+    border: 0px;
+    border-bottom: 1px solid #e9e9e9; }
+
 .Projects_Index {
   background-color: whitesmoke;
   padding: 20px 20vw;
@@ -483,3 +685,101 @@ body .addSection {
     color: white;
     outline: none;
     border: none; }
+
+.sidebar {
+  float: left;
+  position: fixed;
+  border-right: #e9e9e9;
+  padding: 50px 25px;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  width: 200px; }
+  .sidebar .sidebar-nav {
+    list-style: none;
+    margin-bottom: 35px; }
+    .sidebar .sidebar-nav .side-nav-item {
+      list-style: none;
+      margin-bottom: 10px; }
+      .sidebar .sidebar-nav .side-nav-item a {
+        transition: 0.25s; }
+        .sidebar .sidebar-nav .side-nav-item a.active {
+          font-weight: bold; }
+        .sidebar .sidebar-nav .side-nav-item a:hover {
+          text-decoration: underline;
+          color: #333; }
+
+.blogHeaderImg {
+  max-height: 300px;
+  background-image: url("../../images/Scattered-Rocks.jpg");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: bottom center; }
+  .blogHeaderImg .imgHeaderText {
+    width: 450px;
+    margin: 0px auto;
+    text-align: center;
+    padding: 100px 0px 100px 120px;
+    color: white;
+    font-size: 60px;
+    font-weight: 300; }
+
+.blogContainer {
+  margin: 40px; }
+  .blogContainer .blogDetails {
+    display: flex;
+    background-color: #f5f5f5;
+    padding: 40px; }
+    .blogContainer .blogDetails .column {
+      flex: 1; }
+    .blogContainer .blogDetails img {
+      max-width: 300px; }
+    .blogContainer .blogDetails .blogFormControl {
+      width: 80%;
+      height: 50px;
+      background-color: #e9e9e9;
+      border: none;
+      border-bottom: solid 1px #e9e9e9;
+      border-radius: 0px;
+      margin: 20px 0px; }
+      .blogContainer .blogDetails .blogFormControl:focus {
+        border-bottom: solid 1px #333; }
+
+.networksImageHeader {
+  background-image: url("../../images/Networking-Event.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0px 100px 300px; }
+
+.networkContainer {
+  width: 80vw;
+  margin-top: 50px; }
+  .networkContainer .networkDetails {
+    color: #333;
+    padding: 0px 10px;
+    border-right: solid 1px #333; }
+    .networkContainer .networkDetails a, .networkContainer .networkDetails button {
+      width: 100%; }
+  .networkContainer .inlineFlex {
+    display: flex; }
+
+.flexNetworkContainer {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px; }
+  .flexNetworkContainer p, .flexNetworkContainer div {
+    flex: 1; }
+  .flexNetworkContainer .f-2 {
+    flex: 2; }
+
+.projectsHeaderImage {
+  margin-left: 200px;
+  background-image: url("../../images/projectsHeaderImage.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center; }
+  .projectsHeaderImage .headerText {
+    padding: 100px 100px;
+    font-size: 50px;
+    color: white; }

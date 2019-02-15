@@ -1,0 +1,19 @@
+extends layout
+
+block content
+    .sidebarContainer
+        include ./sidebar
+    .projectsHeaderImage.center
+        p.headerText All Projects
+    .Container
+        .cardsContainer
+            .networkContainer
+                form(action="/networkSearch" method="POST").form-group
+                    input(class="inputStyleOne" name="search" type="text" placeholder="Search by Business Name")
+                    button(type="submit" class="secondaryBtn") Search
+                - for(let i = 0; i < projectDetails.length; i++)
+                    hr
+                    .inlineFlex
+                        p.networkDetails #{projectDetails[i].dataValues.title}
+                        p.networkDetails #{projectDetails[i].dataValues.subtitle}
+                        p.networkDetails #{projectDetails[i].dataValues.description}

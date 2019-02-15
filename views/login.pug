@@ -1,13 +1,22 @@
 extends layout
 
 block content
-	div(class="Login")
-		h1 Login
-		form(class="Login_Form" action="/login" method="POST")
-			div(class="form-group")
-				label Username
-				input(class="form-control form-group" autoFocus type="text" name="username")
-			div(class="form-group")
-				label Password
-				input(class="form-control" type="password" name="password")
-			button(class="btn btn-secondary" type="submit") Log in
+	.loginBackgroundImage
+		.container
+			.loginContainer
+				h1.center.loginHeader Login
+				form(class="Login_Form" action="/login" method="POST")
+					div(class="form-group")
+						input(class="form-control form-group" autoFocus type="text" name="username" placeholder="Enter Username")
+					div(class="form-group")
+						input(class="form-control" type="password" name="password" placeholder="Enter Password")
+					
+					- if(buisnessMessage === "Wrong Password")
+						div(class="alert alert-danger")
+							p You entered the Wrong Password.
+
+					- if(buisnessMessage === "Wrong Username")
+						div(class="alert alert-danger")
+							p You entered the Wrong Username.
+					div.center.loginBtnContainer
+						button(class="btn submitBtn" type="submit") Submit

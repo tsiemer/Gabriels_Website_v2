@@ -28,6 +28,7 @@
     "pug": "2.0.0-beta11",
     "sequelize": "^4.38.0",
     "sequelize-cli": "^4.1.1",
-    "serve-favicon": "^2.5.0"
+    "serve-favicon": "^2.5.0",
+    "uuid": "^3.3.2"
   }
 }

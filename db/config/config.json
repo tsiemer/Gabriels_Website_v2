@@ -1,21 +1,21 @@
 {
   "development": {
     "username": "root",
-    "password": "Your pwd for the sequle pro db",
+    "password": "MyD@1s3y",
     "database": "Gabriels_Website",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "Your pwd for the sequle pro db",
+    "password": "MyD@1s3y",
     "database": "Gabriels_Website",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
     "username": "root",
-    "password": "Your pwd for the sequle pro db",
+    "password": "MyD@1s3y",
     "database": "Gabriels_Website",
     "host": "127.0.0.1",
     "dialect": "mysql"

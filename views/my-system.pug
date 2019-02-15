@@ -11,17 +11,4 @@ block content
             - for (let i = 0; i < data.length; i++)
                 - if(data[i].dataValues.blogType === "wayIDoThings")
                     p(class="system_list_text") #{data[i].dataValues.quote}
-            -if(isConfirmed === true)
-                form(method="POST" action="/wayIDoThings")
-                    div(class="form-group")
-                        input(type="text" name="blogType" class="form-control hidden" id="blogType" value="wayIDoThings" readonly)
-
-                    //- div(class="form-group")
-                    //-     input(type="text" name="headerLink" class="form-control hidden" id="headerLink" value=`blog/` readonly)
-
-                    div(class="form-group row")
-                        div(class="col col-md-12")
-                            label(for="quote") Quote
-                            input(type="text" name="quote" class="form-control" id="quote" placeholder="quote")
-                    button(type="submit" class="btn btn-primary") Submit
                 

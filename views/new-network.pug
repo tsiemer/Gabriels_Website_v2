@@ -1,0 +1,28 @@
+extends layout
+
+block content
+    .sidebarContainer
+        include ./sidebar
+    .networksImageHeader.center
+        p.lightHeader Create New Network
+    .Container
+        .cardsContainer
+            .flexNetworkContainer
+                .column.f-2
+                    .networkDetails
+                        form( method="POST" action="/networks/createNew")
+                            .flexContainer
+                                input(class="inputStyleOne" name="clientName" type="text" placeholder="Client Name")
+                                input(class="inputStyleOne" name="phone" type="text" placeholder="Client Phone")
+                            .flexContainer
+                                input(class="inputStyleOne" name="email" type="text" placeholder="Client Email")
+                            .flexContainer
+                                input(class="inputStyleOne" name="businessName" type="text" placeholder="Business Name")
+                                input(class="inputStyleOne" name="businessDescription" type="text" placeholder="Business Description")
+                            .flexContainer
+                                input(class="inputStyleOne" name="roleAtBusiness" type="text" placeholder="Role at Business")
+                            .flexContainer
+                                input(class="inputStyleOne" name="notes" type="text" placeholder="Notes")
+                            button(type="submit" class="submitBtn") Create
+                .column
+                    p.cursiveWriting Accept what is, let go of what was, and have faith in what will be.

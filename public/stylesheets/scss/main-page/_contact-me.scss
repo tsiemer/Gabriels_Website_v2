@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Sue+Ellen+Francisco');
+
+$contact_me_background_color: whitesmoke;
+$contact_me_paragraph_color: #697686;
+$contact_me_link_color: #4277C6;
+
+.ContactMe {
+    background-color:$contact_me_background_color;
+    padding:0px 20px 40px 20px;
+
+    .contact_me_p {
+        color: $contact_me_paragraph_color;
+    }
+
+    .contact_me_a {
+        color: $contact_me_link_color;
+    }
+
+    .social_image {
+        width:100px;
+        height:auto;
+    }
+
+    .DrSuessQuote {
+        font-family: 'Sue Ellen Francisco', cursive;
+        font-size:50px;
+    }
+
+    .sign-marker{
+        position:absolute;
+        bottom:10px;
+        left:50px;
+    }
+}
+

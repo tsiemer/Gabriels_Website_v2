@@ -27,7 +27,12 @@
         flex: 1 0 auto;
         width: 250px;
         max-width: 250px;
-        position: relative; } }
+        position: relative; }
+      
+      .pinterest-container .pinterest-grid .header-link{
+        position:relative;
+        top:50%;
+    }}
 
 .FoodForThought {
   background-color: #EEEEEE;

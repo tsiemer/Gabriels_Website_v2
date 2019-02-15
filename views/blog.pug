@@ -1,0 +1,70 @@
+extends layout
+
+block content
+    .sidebarContainer
+        include ./sidebar
+    
+    .blogHeaderImg
+        p.imgHeaderText #{blogDetails.dataValues.title} 
+
+    .Container
+        .blogContainer
+            - var blogType = blogDetails.dataValues.blogType;
+            - if(blogType === "foodForThought")
+                .blogDetails
+                    .column
+                        p.lightHeader Edit Blog
+                        form(method="POST" action=`/blogs/update/${blogDetails.dataValues.id}`)
+                            input(class="form-control blogFormControl" name="title" type="text" value=`${blogDetails.dataValues.title}` required)
+                            input(class="form-control blogFormControl" name="subtitle" type="text" value=`${blogDetails.dataValues.subtitle}`)
+                            input(class="form-control blogFormControl" name="content" type="text" value=`${blogDetails.dataValues.content}`)
+                            input(class="form-control blogFormControl" name="imgUrl" type="text" value=`${blogDetails.dataValues.imgUrl}`)
+
+                            .btnsContainer
+                                button(type="button" class="smallSubmitBtn right" data-toggle="modal" data-target="#deleteModal") Delete Blog
+                                button(type="submit" class="secondaryBtn") Save
+                    .column
+                        img(class="blogDetailsImg" src=`${blogDetails.dataValues.imgUrl}`)
+            
+            - if(blogType === "aboutMe")
+                .blogDetails
+                    .column
+                        p.lightHeader Edit Blog
+                        form(method="POST" action=`/blogs/update/${blogDetails.dataValues.id}`)
+                            input(class="form-control blogFormControl" name="title" type="text" value=`${blogDetails.dataValues.title}` required)
+                            input(class="form-control blogFormControl" name="subtitle" type="text" value=`${blogDetails.dataValues.subtitle}`)
+                            input(class="form-control blogFormControl" name="content" type="text" value=`${blogDetails.dataValues.content}`)
+                            input(class="form-control blogFormControl" name="imgUrl" type="text" value=`${blogDetails.dataValues.imgUrl}`)
+
+                            .btnsContainer
+                                button(type="button" class="smallSubmitBtn right" data-toggle="modal" data-target="#deleteModal") Delete Blog
+                                button(type="submit" class="secondaryBtn") Save
+                    .column
+                        img(class="blogDetailsImg" src=`${blogDetails.dataValues.imgUrl}`)
+        
+            - if (blogType === "myThoughts")
+                .blogDetails
+                    .column
+                        p.lightHeader Edit Blog
+                        form(method="POST" action=`/blogs/update/${blogDetails.dataValues.id}`)
+                            input(class="form-control blogFormControl" name="title" type="text" value=`${blogDetails.dataValues.title}` required)
+                            input(class="form-control blogFormControl" name="subtitle" type="text" value=`${blogDetails.dataValues.subtitle}`)
+                            input(class="form-control blogFormControl" name="content" type="text" value=`${blogDetails.dataValues.content}`)
+                            input(class="form-control blogFormControl" name="imgUrl" type="text" value=`${blogDetails.dataValues.imgUrl}`)
+
+                            .btnsContainer
+                                button(type="button" class="smallSubmitBtn right" data-toggle="modal" data-target="#deleteModal") Delete Blog
+                                button(type="submit" class="secondaryBtn") Save
+        
+            - if (blogType !== "myThoughts" && blogType !== "wayIDoThings" && blogType !== "aboutMe" && blogType !== "foodForThought")
+                .blogDetails
+                    .column
+                        p.lightHeader You have no blog details to display :(
+
+            .modal.fade(id="deleteModal" tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+                .modal-dialog(role='document')
+                    .modal-content
+                        p.extendedText.blogDetailsContent Are you sure you want to delete this?
+                        .modal-footer
+                            a.smallSubmitBtn(href=`/delete/${blogDetails.dataValues.id}`) Delete
+                            button.smallCancelBtn(type='button', data-dismiss='modal') Cancel

@@ -48,8 +48,8 @@ form{
 }
 
 .gabriel_Background {
-  background-image: url("../../images/gabriel_head_shot.jpg");
-  // background-image: url("../../images/Model-Background-Image-2.jpeg");
+  // background-image: url("../../images/gabriel_head_shot.jpg");
+  background-image: url("../../images/Model-Background-Image-2.jpeg");
   background-attachment: fixed;
   background-position: left center;
   background-repeat: no-repeat;
@@ -318,3 +318,31 @@ form{
 
 }
 
+.errorpage{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+
+  .content-container{
+    flex:1;
+
+    h1, h3,p{
+      font-family: 'Gloria Hallelujah', cursive;
+      // font-family: 'Chewy', cursive;
+    }
+  }
+
+  .dr-suess-cont-one{
+    background-image:url('https://i1.wp.com/bayart.org/wp-content/uploads/2017/11/dr-seuss-quote-be-who-you-are.jpg?resize=544%2C520&ssl=1');
+    background-size:cover;
+    background-position:right;
+    
+    flex:1;
+    height:98vh;
+    min-width:45vw;
+
+    
+  }
+}

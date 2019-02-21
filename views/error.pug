@@ -1,12 +1,12 @@
 extends layout
 
 block content
-  .loginBackgroundImage
-    .container
-      .loginContainer
-        .center
-          h1 #{errorStatus}
-          p #{Message}
-          br
-          .btns-container
-            a(href="/" class="submitBtn") Go Back
+  include ./customer-views/components/Navbar
+  .errorpage
+    .dr-suess-cont-one
+    .content-container
+      h1 #{errorStatus}
+      h3 Page not found
+      p the link you clicked may be broken or the page may have been removed.
+      br
+      a(href="/" class="submitBtn") Return

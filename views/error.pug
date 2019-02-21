@@ -1,6 +1,12 @@
 extends layout
 
 block content
-  .Main  
-    .messageContainer
-      a(href="/login") Back to Login
+  .loginBackgroundImage
+    .container
+      .loginContainer
+        .center
+          h1 #{errorStatus}
+          p #{Message}
+          br
+          .btns-container
+            a(href="/" class="submitBtn") Go Back

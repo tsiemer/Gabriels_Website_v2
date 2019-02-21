@@ -3,12 +3,12 @@
 module.exports = function(app, db) {
     app.get('/projects/all', (req, res, next) => {
         db.Project.findAll({}).then(function(result){
-            res.render('projects', {projectDetails: result});
+            res.render('admin-views/projects', {projectDetails: result});
         });
     });
    
     app.get('/projects/createNew', (req, res, next) => {
-        res.render('new-project');
+        res.render('admin-views/new-project');
     });
 
     // app.get('/projects/:page', (req, res, next) => {
@@ -37,7 +37,7 @@ module.exports = function(app, db) {
             description: req.body.description,
             imgUrl: req.body.imgUrl
         }).then(function(result){
-            res.render('projects-index', {data: result});
+            res.render('admin-views/projects-index', {data: result});
         });
     });
 
@@ -47,7 +47,7 @@ module.exports = function(app, db) {
                 title: req.params.title
             }
         }).then(function(result){
-            res.render('project-details', {data: result});
+            res.render('admin-views/project-details', {data: result});
         });
     });
 };

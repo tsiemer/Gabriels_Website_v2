@@ -1,11 +1,12 @@
-extends layout
+extends ../layout
 
 block content
+
     div(class="Done_And_Doing" id="doneAndDoing")
-        div(class="title")
-            hr(class="main_hr")
-            h2(class="big-title") What I have done &amp; What I am doing
-            hr(class="main_hr")
+        div(class="section-title-container")
+            hr
+            h2 What I have done &amp; What I am doing
+            hr
 
         div(class="content_blocks")
             - for (let i = 0; i < data.length; i++)

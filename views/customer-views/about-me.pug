@@ -1,19 +1,20 @@
-extends layout
+extends ../layout
 
 block content
     div(class="About_Me" id="aboutMe")
-        div(class="title")
-            hr(class="main_hr")
-            h2(class="big-title") About Me
-            hr(class="main_hr")
+        div(class="section-title-container")
+            hr
+            h2 About Me
+            hr
 
-        div(class="content_blocks")
+        div(class="sections-container")
             - for (let i = 0; i < data.length; i++)
                 - if(data[i].dataValues.blogType === "aboutMe")
-                        div(class="Content_Block")
+                        div(class="section")
                             - if(data[i].dataValues.imgUrl !== null)
-                                img(src=`${data[i].dataValues.imgUrl}` class="content_block_image")
-                            div(class="info_section")
+                                div(class="section-image" style=`background-image:url(${data[i].dataValues.imgUrl});`)
+                                //- img(src=`${data[i].dataValues.imgUrl}` class="section-image")
+                            div(class="section-content")
                                 h4(class="header_link") 
                                     a(href=`${data[i].dataValues.headerLink}`) #{data[i].dataValues.title}
                                 h6(class="subtitle") #{data[i].dataValues.subtitle}

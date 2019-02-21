@@ -74,13 +74,13 @@ module.exports = function(app, db) {
     // GETS
     app.get('/', (req, res, next) => {
         db.Blog.findAll({}).then(function(result){
-            res.render('index', { data: result });
+            res.render('customer-views/index', { data: result });
         });
     });
 
     app.get('/blogs/all', (req, res, next) => {
         db.Blog.findAll({}).then(function(result){
-            res.render('blogs', {blogDetails: result});
+            res.render('admin-views/blogs', {blogDetails: result});
         });
     });
     
@@ -90,7 +90,7 @@ module.exports = function(app, db) {
                 id: req.params.blogId
             }
         }).then(function(result){
-            res.render('blog', {blogDetails: result});
+            res.render('admin-views/blog', {blogDetails: result});
         });
     });
 
@@ -109,11 +109,17 @@ module.exports = function(app, db) {
     // PUTS
     app.post('/blogs/update/:blogId', (req, res, next) => {
         db.Blog.update({
-            where: {
-                id: req.params.blogId
-            }
-        }).then(function(result){
+            title: req.body.title,
+            subtitle: req.body.subtitle,
+            content: req.body.content,
+            imgUrl: req.body.imgUrl
+        },{
+        where: {
+            id: req.params.blogId
+        },}).then(function(result){
+            console.log('Updated a blog with that id')
             db.Blog.findAll({}).then(function(result) {
+                console.log('Finding all blogs')
                 res.redirect('/blogs/all');
             })
         })

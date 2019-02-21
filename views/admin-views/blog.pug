@@ -1,8 +1,8 @@
-extends layout
+extends ../admin-layout
 
 block content
     .sidebarContainer
-        include ./sidebar
+        include ./components/sidebar
     
     .blogHeaderImg
         p.imgHeaderText #{blogDetails.dataValues.title} 
@@ -53,18 +53,18 @@ block content
                             input(class="form-control blogFormControl" name="imgUrl" type="text" value=`${blogDetails.dataValues.imgUrl}`)
 
                             .btnsContainer
-                                button(type="button" class="smallSubmitBtn right" data-toggle="modal" data-target="#deleteModal") Delete Blog
                                 button(type="submit" class="secondaryBtn") Save
+                                button(type="button" class="smallSubmitBtn right" data-toggle="modal" data-target="#deleteModal") Delete
         
             - if (blogType !== "myThoughts" && blogType !== "wayIDoThings" && blogType !== "aboutMe" && blogType !== "foodForThought")
                 .blogDetails
                     .column
                         p.lightHeader You have no blog details to display :(
 
-            .modal.fade(id="deleteModal" tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
-                .modal-dialog(role='document')
-                    .modal-content
-                        p.extendedText.blogDetailsContent Are you sure you want to delete this?
-                        .modal-footer
-                            a.smallSubmitBtn(href=`/delete/${blogDetails.dataValues.id}`) Delete
-                            button.smallCancelBtn(type='button', data-dismiss='modal') Cancel
+            //- .modal.fade(id="deleteModal" tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+            //-     .modal-dialog(role='document')
+            //-         .modal-content
+            //-             p.extendedText.blogDetailsContent Are you sure you want to delete this?
+            //-             .modal-footer
+            //-                 a.smallSubmitBtn(href=`/delete/${blogDetails.dataValues.id}`) Delete
+            //-                 button.smallCancelBtn(type='button', data-dismiss='modal') Cancel

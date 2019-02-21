@@ -1,3 +1,5 @@
+@import './_variables';
+
 .networksImageHeader{
     background-image: url("../../images/Networking-Event.jpg");
     background-repeat:no-repeat;
@@ -14,9 +16,9 @@
     margin-top:50px;
     
     .networkDetails{
-        color:#333;
+        color:$primary-text-color;
         padding:0px 10px;
-        border-right:solid 1px #333;
+        border-right:solid 1px $primary-text-color;
 
         a, button {
             width:100%;

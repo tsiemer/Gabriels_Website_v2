@@ -1,60 +1,74 @@
 @import url("https://fonts.googleapis.com/css?family=Sue+Ellen+Francisco");
+@import url("https://fonts.googleapis.com/css?family=Chivo:900");
+@import url("https://fonts.googleapis.com/css?family=Sue+Ellen+Francisco");
+@import url("https://fonts.googleapis.com/css?family=Chivo:900");
+@import url("https://fonts.googleapis.com/css?family=Sue+Ellen+Francisco");
+@import url("https://fonts.googleapis.com/css?family=Chivo:900");
+@import url("https://fonts.googleapis.com/css?family=Sue+Ellen+Francisco");
+@import url("https://fonts.googleapis.com/css?family=Chivo:900");
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 @import url("https://fonts.googleapis.com/css?family=Oxygen+Mono");
+@import url("https://fonts.googleapis.com/css?family=Sue+Ellen+Francisco");
 @import url("https://fonts.googleapis.com/css?family=Chivo:900");
-@media screen and (max-width: 600px) {
-  .Content_Block {
-    max-width: 80vw;
-    margin: 0px 10vw 0px 10vw; }
-    .Content_Block .content_blocks {
+@import url("https://fonts.googleapis.com/css?family=Sue+Ellen+Francisco");
+@import url("https://fonts.googleapis.com/css?family=Chivo:900");
+@import url("https://fonts.googleapis.com/css?family=Sue+Ellen+Francisco");
+@import url("https://fonts.googleapis.com/css?family=Chivo:900");
+@import url("https://fonts.googleapis.com/css?family=Sue+Ellen+Francisco");
+@import url("https://fonts.googleapis.com/css?family=Chivo:900");
+@import url("https://fonts.googleapis.com/css?family=Sue+Ellen+Francisco");
+@import url("https://fonts.googleapis.com/css?family=Chivo:900");
+@media screen and (max-width: 650px) {
+  .sections-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
+    .sections-container .section {
       display: flex;
-      flex-wrap: wrap; }
-    .Content_Block .info_section {
-      order: 2;
-      width: 80vw; }
-      .Content_Block .info_section .description {
-        max-width: 80vw; }
-    .Content_Block .content_block_image {
-      flex: 1;
-      width: 80vw;
-      height: 80vw; } }
+      flex-wrap: wrap;
+      margin: 0px 20px; }
+      .sections-container .section .section-content {
+        flex: 1;
+        min-width: 300px;
+        padding: 0px;
+        border: solid 1px #333; }
+      .sections-container .section .section-image {
+        background-size: cover;
+        flex: 1;
+        min-width: 350px;
+        min-height: 300px; } }
 
 .About_Me {
   background-color: #EEEEEE;
   height: auto;
   padding-bottom: 50px; }
-  .About_Me .Content_Block {
-    max-width: 60vw;
-    height: auto;
-    margin: 0px 20vw 0px 20vw;
-    padding: 15px 0px;
+  .About_Me .section {
     display: flex;
-    flex-wrap: wrap; }
-    .About_Me .Content_Block .info_section {
-      flex: 2; }
-    .About_Me .Content_Block .header_link {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 0px; }
+    .About_Me .section .section-content {
+      flex: 1;
+      padding: 40px;
+      min-width: 300px;
+      text-align: left; }
+    .About_Me .section .header_link {
       font-size: 24px;
-      line-height: 35px;
-      text-align: left; }
-    .About_Me .Content_Block .subtitle {
-      color: #333;
-      text-align: left; }
-    .About_Me .Content_Block .description {
+      line-height: 35px; }
+    .About_Me .section .subtitle {
+      color: #333; }
+    .About_Me .section .description {
       color: #555555;
       font-size: 15px;
-      line-height: 22px;
-      text-align: left;
-      max-width: 38vw; }
-      .About_Me .Content_Block .description-noImg {
-        text-align: center;
+      line-height: 22px; }
+      .About_Me .section .description-noImg {
         line-height: 28px;
-        font-size: 18px;
-        padding: 0px 0px 30px 0px; }
-    .About_Me .Content_Block .content_block_image {
+        font-size: 18px; }
+    .About_Me .section .section-image {
+      background-size: cover;
       flex: 1;
-      width: 20vw;
-      height: 20vw;
-      margin-right: 40px; }
+      min-width: 350px;
+      min-height: 300px; }
 
 @media screen and (max-width: 600px) {
   .Content_Block {
@@ -110,67 +124,30 @@
       height: 20vw;
       margin-right: 40px; }
 
-@media screen and (max-width: 750px) {
-  .Content_Block {
-    max-width: 80vw !important;
-    margin: 0px 10vw 0px 10vw !important; }
-    .Content_Block .content_blocks {
-      display: flex;
-      flex-wrap: wrap; }
-    .Content_Block .info_section {
-      order: 2;
-      width: 80vw !important; }
-      .Content_Block .info_section .description {
-        max-width: 80vw !important; }
-  .pinterest-container {
-    max-height: 650px;
-    width: 90vw;
-    margin: 0px auto;
-    overflow: scroll;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    column-count: 3; }
-    .pinterest-container .pinterest-grid {
-      margin: 5px; }
-      .pinterest-container .pinterest-grid .grid-img {
-        margin: 5px;
-        flex: 1 0 auto;
-        width: 250px;
-        max-width: 250px;
-        position: relative; }
-      .pinterest-container .pinterest-grid .header-link {
-        position: relative;
-        top: 50%; } }
+@media screen and (max-width: 350px) {
+  .FoodForThought .pinterest-container {
+    column-count: 2; } }
 
 .FoodForThought {
   background-color: whitesmoke;
   padding-bottom: 60px; }
   .FoodForThought .pinterest-container {
-    padding-left: 50px;
-    max-height: 700px;
-    width: 90vw;
-    margin: 0px auto;
-    overflow: scroll;
+    max-height: 800px;
+    margin: 0px 20px;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start; }
-    .FoodForThought .pinterest-container .pinterest-grid .grid-img {
-      margin: 5px;
-      flex: 1 0 auto;
-      width: 250px;
-      max-width: 250px;
-      position: relative; }
+    flex-flow: column wrap;
+    align-content: center;
+    column-count: 4; }
+    .FoodForThought .pinterest-container .pinterest-grid {
+      margin: 5px; }
+      .FoodForThought .pinterest-container .pinterest-grid .grid-img {
+        width: 300px; }
 
 .ContactMe {
   background-color: whitesmoke;
   padding: 0px 20px 40px 20px; }
   .ContactMe .contact_me_p {
-    color: #697686; }
+    color: #555555; }
   .ContactMe .contact_me_a {
     color: #4277C6; }
   .ContactMe .social_image {
@@ -187,24 +164,23 @@
 .Intro {
   color: #333;
   font-family: "Roboto", sans-serif;
+  height: 100vh;
+  display: flex;
   text-align: center;
-  padding-top: 25vh;
-  height: 100vh; }
-  .Intro .intro-small-text {
+  justify-content: center;
+  align-items: center; }
+  .Intro p {
     color: #333;
     font-size: 26px;
     line-height: 38px;
     font-style: italic; }
-  .Intro .big-intro {
+  .Intro .header-container {
     display: inline-flex; }
-  .Intro .Intro_Title {
-    font-family: 'Oxygen Mono', monospace; }
-  .Intro .intro-big-text {
+  .Intro h1 {
     color: #333;
     font-size: 59px;
-    line-height: 70px;
     padding: 0px 10px; }
-  .Intro .intro-hr {
+  .Intro hr {
     width: 80px;
     color: #333;
     background-color: #333;
@@ -218,79 +194,38 @@
     width: 60vw;
     margin: 0px 20vw;
     padding: 40px 0px;
-    color: white; }
+    color: whitesmoke; }
     .My_System .my_system_list .system_list_text {
       font-size: 20px;
       line-height: 38px;
       font-weight: 400;
       text-transform: uppercase; }
 
-@media screen and (max-width: 600px) {
-  .Content_Block {
-    max-width: 80vw;
-    margin: 0px 10vw 0px 10vw; }
-    .Content_Block .content_blocks {
-      display: flex;
-      flex-wrap: wrap; }
-    .Content_Block .info_section {
-      order: 2;
-      width: 80vw; }
-      .Content_Block .info_section .description {
-        max-width: 80vw; }
-    .Content_Block .content_block_image {
-      flex: 1;
-      width: 80vw;
-      height: 80vw; } }
-
 .MyThoughts {
+  padding: 100px 0px;
   width: 100vw;
-  min-height: 600px;
-  background-color: whitesmoke;
-  padding-bottom: 50px; }
-  .MyThoughts .my_thoughts_content {
-    display: flex; }
-  .MyThoughts .Content_Block {
-    max-width: 60vw;
-    height: auto;
-    margin: 0px 20vw 0px 20vw;
-    padding: 15px 0px;
+  background-color: whitesmoke; }
+  .MyThoughts .cards-container {
     display: flex;
-    flex-wrap: wrap; }
-    .MyThoughts .Content_Block .info_section {
-      flex: 2;
-      padding-right: 20px; }
-    .MyThoughts .Content_Block .header_link {
-      font-size: 24px;
-      line-height: 35px;
-      text-align: left; }
-    .MyThoughts .Content_Block .subtitle {
-      color: #333;
-      text-align: left; }
-    .MyThoughts .Content_Block .description {
-      color: #555555;
-      font-size: 15px;
-      line-height: 22px;
-      text-align: left;
-      max-width: 38vw; }
-      .MyThoughts .Content_Block .description-noImg {
-        text-align: center;
-        line-height: 28px;
-        font-size: 18px;
-        padding: 0px 0px 30px 0px; }
-    .MyThoughts .Content_Block .content_block_image {
-      flex: 1;
-      width: 20vw;
-      height: 20vw;
-      margin-right: 40px; }
+    flex-wrap: wrap;
+    justify-content: space-around; }
+    .MyThoughts .cards-container .card {
+      background-color: #EEEEEE;
+      min-width: 300px;
+      max-width: 400px; }
+      .MyThoughts .cards-container .card .card-content {
+        flex: 1;
+        text-align: left;
+        padding: 20px; }
+      .MyThoughts .cards-container .card .card-image {
+        background-size: cover;
+        max-width: 100%;
+        height: 250px; }
 
-.MyThoughtsEdit {
-  background-color: black; }
-  .MyThoughtsEdit .myThoughtsContainer {
-    max-width: 80vw;
-    height: 330px;
-    margin: 0px 10vw; }
-  .MyThoughtsEdit .myThoughtsEditForm {
-    padding: 15px 5vw; }
+html, body {
+  scroll-behavior: smooth;
+  margin: 0px;
+  padding: 0px; }
 
 form {
   width: 100%; }
@@ -301,18 +236,14 @@ form {
 .inputStyleOne {
   width: 60%;
   height: 50px;
-  background-color: #e9e9e9;
+  background-color: #EEEEEE;
   border: none;
-  border-bottom: solid 1px #e9e9e9;
+  border-bottom: solid 1px #EEEEEE;
   border-radius: 0px;
   padding: 0px 10px;
   margin: 20px 0px; }
   .inputStyleOne:focus {
     border-bottom: solid 1px #333; }
-
-body {
-  margin: 0px;
-  padding: 0px; }
 
 .Main {
   z-index: inherit 1010;
@@ -327,7 +258,7 @@ body {
   max-height: 80vh;
   margin: 20px auto;
   text-align: center;
-  background-color: #f5f5f5;
+  background-color: #EEEEEE;
   color: black; }
 
 .gabriel_Background {
@@ -346,52 +277,30 @@ body {
   background-size: cover;
   transform: translateX(0px) scale(1.02); }
 
-.title {
+.section-title-container {
   display: inline-flex;
   margin-top: 80px; }
-
-.big-title {
-  color: #333;
-  padding: 5px;
-  font-weight: bolder; }
-
-.secondary-big-title {
-  color: white;
-  padding: 5px;
-  font-weight: bolder; }
-
-.inline {
-  display: inline; }
-
-.inlineFlex {
-  text-align: left;
-  width: 100%; }
-  .inlineFlex a {
-    float: right; }
-
-.flexContainer {
-  display: flex; }
-  .flexContainer div, .flexContainer input {
-    flex: 1;
-    margin-right: 20px; }
-
-.main_hr {
-  width: 70px;
-  height: 1px;
-  background-color: #333;
-  color: #333;
-  border: solid #333 0.7px;
-  margin-top: 38px; }
+  .section-title-container h2, .section-title-container h3 {
+    color: #333;
+    padding: 5px;
+    font-weight: bolder; }
+  .section-title-container hr {
+    width: 70px;
+    height: 1px;
+    background-color: #333;
+    color: #333;
+    border: solid #333 0.7px;
+    margin-top: 38px; }
 
 .contact-me-hr {
-  margin-top: 38px; }
+  margin-top: -100px; }
 
 .secondary_hr {
   width: 70px;
   height: 1px;
-  background-color: white;
-  color: white;
-  border: solid white 0.7px;
+  background-color: whitesmoke;
+  color: whitesmoke;
+  border: solid whitesmoke 0.7px;
   margin-top: 38px; }
 
 .btns-container {
@@ -401,14 +310,14 @@ body {
     position: relative;
     margin: 0px 10px;
     background-color: #4277C6;
-    color: white;
+    color: whitesmoke;
     padding: 10px;
     border-radius: 5px;
     transition: 0.2s; }
     .btns-container .back-button:hover {
       background-color: #333;
       text-decoration: none;
-      color: white; }
+      color: whitesmoke; }
   .btns-container .page-link {
     margin: 0px 10px;
     border: solid 1px #4277C6;
@@ -425,58 +334,58 @@ body {
   padding: 12px 150px;
   margin: 0px auto;
   background-color: #8187b1;
-  color: white;
+  color: whitesmoke;
   font-size: 15px;
   border-radius: 0px;
   transition: .5s; }
   .submitBtn:hover {
     background-color: #9499bd;
-    color: white; }
+    color: #fafafa; }
 
 .secondaryBtn {
   padding: 12px 80px;
   margin: 0px auto;
   background-color: #333;
-  color: white;
+  color: whitesmoke;
   font-size: 15px;
   border-radius: 0px;
   transition: .5s; }
   .secondaryBtn:hover {
     background-color: #424242;
-    color: white; }
+    color: #fafafa; }
   .secondaryBtn:focus {
     background-color: #424242;
-    color: white; }
+    color: #fafafa; }
 
 .smallSubmitBtn {
   padding: 12px 50px;
   margin: 0px auto;
   background-color: #8187b1;
-  color: white;
+  color: whitesmoke;
   font-size: 15px;
   border-radius: 0px;
   transition: .5s; }
   .smallSubmitBtn:hover {
     background-color: #9499bd;
-    color: white; }
+    color: #fafafa; }
   .smallSubmitBtn:focus {
     background-color: #9499bd;
-    color: white; }
+    color: #fafafa; }
 
 .smallCancelBtn {
   padding: 12px 50px;
   margin: 0px auto;
-  background-color: #f5f5f5;
+  background-color: #EEEEEE;
   color: black;
   font-size: 15px;
   border: 0px;
   border-radius: 0px;
   transition: .5s; }
   .smallCancelBtn:hover {
-    background-color: white;
+    background-color: #fdfdfd;
     color: #050505; }
   .smallCancelBtn:focus {
-    background-color: white;
+    background-color: #fdfdfd;
     color: #050505; }
 
 .extendedText {
@@ -516,15 +425,15 @@ body {
     height: 20vw; }
 
 .fa-angle-right {
-  color: white;
+  color: whitesmoke;
   float: right; }
 
 .fa-trash {
-  color: #f5f5f5;
+  color: #EEEEEE;
   text-align: right; }
 
 .fa-pencil {
-  color: #f5f5f5;
+  color: #EEEEEE;
   margin-right: 15px;
   text-align: right; }
 
@@ -552,7 +461,7 @@ body {
   .dashboardImageHeader .headerText {
     padding: 100px 100px;
     font-size: 50px;
-    color: white; }
+    color: whitesmoke; }
 
 .Container {
   margin-left: 200px; }
@@ -561,7 +470,7 @@ body {
     flex-wrap: wrap;
     padding: 0px 50px; }
     .Container .cardsContainer .editsContainer {
-      color: white;
+      color: whitesmoke;
       border-radius: 10px;
       max-height: 500px;
       overflow: scroll;
@@ -581,7 +490,7 @@ body {
       .Container .cardsContainer .editsContainer input, .Container .cardsContainer .editsContainer textarea {
         border-radius: 0px;
         border: 0px;
-        border-bottom: 1px solid #e9e9e9;
+        border-bottom: 1px solid #EEEEEE;
         margin: 20px 0px; }
     .Container .cardsContainer .aboutMeAll {
       display: none; }
@@ -591,7 +500,7 @@ body {
   padding-left: 20vw;
   background-color: transparent; }
   .Login .Login_Form {
-    background-color: white; }
+    background-color: whitesmoke; }
 
 .loginBackgroundImage {
   background-image: url("../../images/Login-Background-Image.jpeg");
@@ -601,7 +510,7 @@ body {
 
 .loginContainer {
   background-color: #5c6175;
-  color: white;
+  color: whitesmoke;
   width: 650px;
   padding: 100px 50px;
   margin: 0px auto;
@@ -616,17 +525,17 @@ body {
       padding: 12px 150px;
       margin: 0px auto;
       background-color: #8187b1;
-      color: white;
+      color: whitesmoke;
       font-size: 15px;
       border-radius: 0px;
       transition: .5s; }
       .loginContainer .loginBtnContainer .submitBtn:hover {
         background-color: #9499bd;
-        color: white; }
+        color: #fafafa; }
   .loginContainer input {
     border-radius: 0px;
     border: 0px;
-    border-bottom: 1px solid #e9e9e9; }
+    border-bottom: 1px solid #EEEEEE; }
 
 .Projects_Index {
   background-color: whitesmoke;
@@ -653,14 +562,14 @@ body {
       z-index: 20;
       border: none;
       outline: none;
-      background-color: #333333;
-      color: white;
+      background-color: #333;
+      color: #EEEEEE;
       border-radius: 2px;
       position: fixed;
       left: 20px;
       top: 10px; }
     .navbar .navbar_list {
-      background-color: white !important;
+      background-color: #EEEEEE !important;
       width: 100vw;
       position: fixed;
       left: 0px;
@@ -670,7 +579,7 @@ body {
       text-align: left; }
       .navbar .navlink_listp, .navbar .navlink_list a {
         padding-left: 30px;
-        color: #666666;
+        color: #555555;
         text-decoration: none;
         font-weight: lighter; } }
 
@@ -682,17 +591,17 @@ body {
   .navbar .navbar_btn {
     background-color: transparent;
     background-color: #333;
-    color: white;
+    color: whitesmoke;
     outline: none;
     border: none; }
 
 .sidebar {
   float: left;
   position: fixed;
-  border-right: #e9e9e9;
+  border-right: #EEEEEE;
   padding: 50px 25px;
   min-height: 100vh;
-  background-color: #f5f5f5;
+  background-color: whitesmoke;
   width: 200px; }
   .sidebar .sidebar-nav {
     list-style: none;
@@ -719,7 +628,7 @@ body {
     margin: 0px auto;
     text-align: center;
     padding: 100px 0px 100px 120px;
-    color: white;
+    color: whitesmoke;
     font-size: 60px;
     font-weight: 300; }
 
@@ -727,7 +636,7 @@ body {
   margin: 40px; }
   .blogContainer .blogDetails {
     display: flex;
-    background-color: #f5f5f5;
+    background-color: #EEEEEE;
     padding: 40px; }
     .blogContainer .blogDetails .column {
       flex: 1; }
@@ -736,9 +645,9 @@ body {
     .blogContainer .blogDetails .blogFormControl {
       width: 80%;
       height: 50px;
-      background-color: #e9e9e9;
+      background-color: #EEEEEE;
       border: none;
-      border-bottom: solid 1px #e9e9e9;
+      border-bottom: solid 1px #EEEEEE;
       border-radius: 0px;
       margin: 20px 0px; }
       .blogContainer .blogDetails .blogFormControl:focus {
@@ -782,4 +691,4 @@ body {
   .projectsHeaderImage .headerText {
     padding: 100px 100px;
     font-size: 50px;
-    color: white; }
+    color: whitesmoke; }

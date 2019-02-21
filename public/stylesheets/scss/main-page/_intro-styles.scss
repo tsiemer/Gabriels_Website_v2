@@ -2,46 +2,41 @@
 @import url('https://fonts.googleapis.com/css?family=Oxygen+Mono');
 $main-font: 'Roboto', sans-serif;
 
-// Color variables
-$intro-text-color: #333;
-$hr_width:70px;
-$hr_color:#333;
+@import '../_variables';
 
 
 .Intro {
-    color:$intro-text-color;
+    color:$primary-text-color;
     font-family:$main-font;
-    text-align:center;
-    padding-top:25vh;
     height:100vh;
-
-    .intro-small-text {
-        color: $intro-text-color;
+    display:flex;
+    text-align:center;
+    justify-content: center;
+    align-items:center;
+    
+    p{
+        color: $primary-text-color;
         font-size:26px;
         line-height:38px;
         font-style: italic;
     }
 
-    .big-intro {
+    .header-container{
         display:inline-flex;
     }
-    
-    .Intro_Title {
-        font-family: 'Oxygen Mono', monospace;
-    }
 
-    .intro-big-text {
-        color: $intro-text-color;
+    h1{
+        color: $primary-text-color;
         font-size:59px;
-        line-height:70px;
+        // line-height:70px;
         padding:0px 10px;
     }
 
-    .intro-hr {
+    hr{
         width:80px;
-        color:$hr_color;
-        background-color:$hr_color;
-        border:solid $hr_color 1px;
+        color:$primary-text-color;
+        background-color:$primary-text-color;
+        border:solid $primary-text-color 1px;
         margin-top:50px;
     }
 }

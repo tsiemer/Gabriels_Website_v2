@@ -1,16 +1,21 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 
-//style paths * don't touch this.
+//style paths
 var sassFiles = 'public/stylesheets/scss/**/*.scss',
-    cssDest = 'public/stylesheets/css/';
+    cssDest = './public/stylesheets/css';
 
 gulp.task('stylesheets', function(){
-    gulp.src(sassFiles)
-        .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest(cssDest));
+    return gulp.src(sassFiles)
+        .pipe(sass())
+        .pipe(gulp.dest('public/stylesheets/css'))
 });
 
-gulp.task('watch',function() {
+
+gulp.task('default', function() {
+    console.log("Hello master!")
+    console.log("Let me watch stylesheets for you.")
+    
+    // gulp.watch('public/stylesheets/sass/**/*.scss', gulp.series('stylesheets')); 
     gulp.watch(sassFiles,['stylesheets']);
 });

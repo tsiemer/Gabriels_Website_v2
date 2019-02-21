@@ -1,83 +1,80 @@
-$about_me_background_color:#EEEEEE;
-$description_color:#555555;
-$description_size:15px;
-$subtitle_color:#333;
+@import '../_variables';
 
 
-@media screen and (max-width:600px) {
-    .Content_Block {
-        max-width: 80vw ;
-        margin:0px 10vw 0px 10vw ;
-        .content_blocks {
+@media screen and (max-width:650px) {
+    .sections-container {
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+
+        .section {
             display:flex;
             flex-wrap:wrap;
-        }
-        .info_section {
-            order:2;
-            width:80vw ;
+            margin:0px 20px;
 
-            .description {
-                max-width:80vw;
+            .section-content {
+                flex:1;
+                min-width:300px;
+                padding:0px;
+                border:solid 1px $primary-text-color;
+                
             }
-        }
 
-        .content_block_image{
-            flex:1;
-            width:80vw ;
-            height:80vw ;
+            .section-image{
+                background-size:cover;
+                flex:1;
+                min-width:350px;
+                min-height:300px;
+                
+            }
         }
     }
 }
 
 .About_Me {
-    background-color:$about_me_background_color;
+    background-color:$secondary-light-color;
     height:auto;
     padding-bottom:50px;
 
-    .Content_Block {
-        max-width:60vw;
-        height:auto;
-        margin:0px 20vw 0px 20vw;
-        padding:15px 0px;
+    .section {
         display:flex;
         flex-wrap:wrap;
+        justify-content:center;
+        padding:10px 0px;
         
 
-        .info_section {
-            flex:2;
+        .section-content {
+            flex:1;
+            padding:40px;
+            min-width:300px;
+            text-align:left;
         }
 
         .header_link {
             font-size:24px;
             line-height:35px;
-            text-align:left;
         }
 
         .subtitle {
-            color: $subtitle_color;
-            text-align:left;
+            color: $primary-text-color;
         }
 
         .description{
             color:$description_color;
             font-size:$description_size;
             line-height: 22px;
-            text-align:left;
-            max-width:38vw;
 
             &-noImg{
-                text-align:center;
                 line-height:28px;
                 font-size:18px;
-                padding:0px 0px 30px 0px;
             }
         }
 
-        .content_block_image{
+        .section-image{
+            background-size:cover;
             flex:1;
-            width:20vw;
-            height:20vw;
-            margin-right:40px;
+            min-width:350px;
+            min-height:300px;
         }
     }
 }

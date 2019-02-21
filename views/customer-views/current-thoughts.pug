@@ -1,0 +1,21 @@
+extends ../layout
+
+block content
+    div(class="MyThoughts" id="myThoughts")
+        div(class="section-title-container")
+            hr
+            h2 Current Thoughts
+            hr
+
+        div(class="cards-container")
+            - for (let i = 0; i < data.length; i++)
+                - if(data[i].dataValues.blogType === "myThoughts")
+                    div(class="card")
+                        - if(data[i].dataValues.imgUrl !== null)
+                            div(class="card-image" style=`background-image:url(${data[i].dataValues.imgUrl})`)
+                            
+                        div(class="card-content")
+                            h4(class="header_link") 
+                                a(href=`${data[i].dataValues.headerLink}`) #{data[i].dataValues.title}
+                            p(class='description') #{data[i].dataValues.content}
+                        

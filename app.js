@@ -49,7 +49,7 @@ var options = {
 var sessionStore = new MySQLStore(options)
 
 app.use(session({
-    secret: 'This app is awesome!',
+    secret: 'Aspire to Inspire before you Expire... - Trinity Siemer',
     resave: false,
     store: sessionStore,
     saveUninitialized: false
@@ -83,32 +83,34 @@ apiRoutes(app, db)
 
 passport.use('adminRoute', new LocalStrategy(
     async function (username, password, done) {
-        console.log
+        console.log("Using the Admin Route ")
         const adminDetails = await db.Admin.findOne({
             where: {
                 username
             }
+        }).then((result) => {
+            if (!result) {
+                console.log("No result")
+                done(null, false)
+            } else {
+                const hash = result.dataValues.password;
+                bcrypt.compare(password, hash, (err, response) => {
+                    if (response) {
+                        console.log("Passing the user id")
+                        const user_id = result.dataValues.id;
+                        return done(null, user_id);
+                    } else {
+                        console.log("No result")
+                        return done(null, false);
+                    }
+                })
+            }
         })
-
-        if (!adminDetails) {
-            done(null, false)
-        } else {
-            const hash = adminDetails.dataValues.password;
-            bcrypt.compare(password, hash, (err, response) => {
-                console.log(response)
-                if (response) {
-                    const user_id = adminDetails.dataValues.id;
-                    return done(null, user_id);
-                } else {
-                    return done(null, false);
-                }
-            })
-        }
     }
 ));
 
 passport.serializeUser(function(user_id, done) {
-    done(null, user_idx);
+    done(null, user_id);
 });
   
 passport.deserializeUser(function(user, done) {

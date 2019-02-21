@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+    div(class="FoodForThought" id="foodForThought")
+        div(class="section-title-container")
+            hr
+            h2 My Interests
+            hr
+        div(class="pinterest-container")
+            - for (let i = 0; i < data.length; i++)
+                - if(data[i].dataValues.blogType === "foodForThought")
+                    div(class="pinterest-grid")
+                        a(class="header-link" href=`${data[i].dataValues.headerLink}`)
+                            img(class="grid-img" src=`${data[i].dataValues.imgUrl}` alt=`${data[i].dataValues.title}`)
+                            
+                            

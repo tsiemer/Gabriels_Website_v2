@@ -1,86 +1,33 @@
-$my_thoughts_section_color:whitesmoke;
-$my_thoughts_section_height:600px;
-$description_color:#555555;
-$description_size:15px;
-$subtitle_color:#333;
+@import '../_variables';
 
 
-@media screen and (max-width:750px) {
-    .Content_Block {
-        max-width: 80vw !important;
-        margin:0px 10vw 0px 10vw !important;
-        .content_blocks {
-            display:flex;
-            flex-wrap:wrap;
+@media screen and (max-width:350px) {
+    .FoodForThought {
+        .pinterest-container{
+            column-count:2;
+            
         }
-        .info_section {
-            order:2;
-            width:80vw !important;
-
-            .description {
-                max-width:80vw !important;
-            }
-        }
-    }
-
-    .pinterest-container{
-        max-height:650px;
-        width:90vw;
-        margin:0px auto;
-        overflow:scroll;
-
-        display:flex;
-        flex-wrap:wrap;
-        flex-direction:column;
-        justify-content: flex-start;
-        align-items: flex-start;
-
-        column-count: 3;
-        
-        .pinterest-grid{
-            margin:5px;
-            .grid-img {
-                margin:5px;
-                flex: 1 0 auto;
-                width:250px;
-                max-width:250px;
-                position:relative;
-            }
-
-            .header-link{
-                position:relative;
-                top:50%;
-            }
-        }
+    
     }
 }
 
-
 .FoodForThought {
-    background-color: $my_thoughts_section_color;
+    background-color: $primary-light-color;
     padding-bottom:60px;
     .pinterest-container{
-        padding-left:50px;
-        max-height:700px;
-        width:90vw;
-        margin:0px auto;
-        overflow:scroll;
-
+        max-height:800px;
+        margin:0px 20px;
         display:flex;
-        flex-wrap:wrap;
-        flex-direction:column;
-        justify-content: flex-start;
-        align-items: flex-start;
+        flex-flow: column wrap;
+        align-content: center;
+        column-count:4;
         
         .pinterest-grid{
+            margin:5px;
+
             .grid-img {
-                margin:5px;
-                flex: 1 0 auto;
-                width:250px;
-                max-width:250px;
-                position:relative;
+                width:300px;
             }
         }
     }
-
 }

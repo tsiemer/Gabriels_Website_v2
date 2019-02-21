@@ -1,11 +1,11 @@
-extends layout
+extends ../../layout
 
 block content
     nav(class="navbar")
         button(type="button" class="navbar_btn navbar-toggle" data-toggle="collapse" data-target="#myNavbar")
             i(class="fa fa-bars fa-lg")                      
         div(class="collapse" id="myNavbar")
-            div(class="container navbar_list" id="collapseExample")
+            div(class="container navbar_list")
                 ul(class="navlink_list")
                     p
                         a(href="#myThoughts") CURRENT THOUGHTS
@@ -21,6 +21,3 @@ block content
                         hr(class="navbar_hr")
                     p
                         a(href="#contactMe") CONNECT
-
-    script 
-        include ../public/javascripts/smoothScroll.js

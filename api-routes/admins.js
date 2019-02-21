@@ -10,14 +10,14 @@ module.exports = function(app, db) {
     app.get('/admins', (req, res, next) => {
         db.Admin.findAll({
         }).then((result) => {
-            res.render('index', {admins: result})
+            res.render('customer-views/index', {admins: result})
         })
     });
 
     app.post('/login', passport.authenticate(
         'adminRoute', {
             failureRedirect: '/',
-            successRedirect: '/dashboard/'
+            successRedirect: `/dashboard/`
         }
     ));
    
@@ -52,9 +52,19 @@ module.exports = function(app, db) {
         }
     });
 
-    // app.get('/dashboard/:id', function(req, res) {
-    app.get('/dashboard/:id', helpers.ensureOnlyAdmin(), helpers.authenticationMiddleware(), function(req, res) {
-        console.log("Rendering the Dashboard")
-        res.render('dashboard');
+    app.get('/dashboard',  function(req, res) {
+        res.render('admin-views/dashboard');
     });
+    
+    // app.get('/dashboard/:id', function(req, res) {
+    //     res.render('admin-views/dashboard');
+    // });
+
+    passport.serializeUser(function(user_id, done){
+        done(null, user_id);
+    });
+
+    passport.deserializeUser(function(user_id, done){
+        done(null, user_id)
+    })
 };

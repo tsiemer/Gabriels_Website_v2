@@ -1,7 +1,4 @@
-$background_color:#EEEEEE;
-$description_color:#555555;
-$description_size:15px;
-$subtitle_color:#333;
+@import '../_variables';
 
 
 @media screen and (max-width:600px) {
@@ -30,7 +27,7 @@ $subtitle_color:#333;
 }
 
 .Done_And_Doing {
-    background-color:$background_color;
+    background-color:$secondary-light-color;
     height:auto;
     padding-bottom:50px;
 
@@ -54,7 +51,7 @@ $subtitle_color:#333;
         }
 
         .subtitle {
-            color: $subtitle_color;
+            color: $primary-text-color;
             text-align:left;
         }
 

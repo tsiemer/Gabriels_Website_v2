@@ -1,14 +1,14 @@
-extends layout
+extends ../layout
 
 block content
     div(class="Main")
-        include ./Navbar
+        include ./components/Navbar
         div(class="gabriel_Background")
             include ./Intro
             include ./about-me
             include ./current-thoughts
             include ./done-and-doing
         div(class="blue_Background")
-            include ./food-for-thought
-            include ./my-system
+            include ./my-interests
+            include ./inspirations
             include ./contact-me

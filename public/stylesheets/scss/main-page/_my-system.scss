@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Chivo:900');
+@import '../_variables';
 
 .My_System {
     min-height:auto;
@@ -8,7 +8,7 @@
         width:60vw;
         margin:0px 20vw;
         padding:40px 0px;
-        color:white;
+        color:$primary-light-color;
 
         .system_list_text {
             font-size:20px;

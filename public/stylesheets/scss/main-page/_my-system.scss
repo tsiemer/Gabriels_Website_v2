@@ -6,11 +6,12 @@
 
     .my_system_list {
         width:60vw;
-        margin:0px 20vw;
+        margin:0px auto;
         padding:40px 0px;
         color:$primary-light-color;
 
         .system_list_text {
+            color:$primary-light-color;
             font-size:20px;
             line-height:38px;
             font-weight:400;

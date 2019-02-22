@@ -1,23 +1,33 @@
 extends ../admin-layout
 
 block content
-    .sidebarContainer
-        include ./components/sidebar
     .networksImageHeader.center
-        p.lightHeader All Networks
+        h1.lightHeader All Networks
     .Container
-        .cardsContainer
-            .networkContainer
-                form(action="/networkSearch" method="POST").form-group
-                    input(class="inputStyleOne" name="search" type="text" placeholder="Search by Client Name")
-                    button(type="submit" class="secondaryBtn") Search
-                - for (let i = 0; i < networkDetails.length; i++)
-                    hr
-                    .inlineFlex
-                        a.networkDetails(href=`/networks/${networkDetails[i].dataValues.id}`) #{networkDetails[i].dataValues.clientName}
-                        p.networkDetails #{networkDetails[i].dataValues.businessName}
-                        p.networkDetails #{networkDetails[i].dataValues.roleAtBusiness}
-                        p.networkDetails #{networkDetails[i].dataValues.phone}
-                        p.networkDetails #{networkDetails[i].dataValues.email}
-                        p.networkDetails #{networkDetails[i].dataValues.notes}
-                    
+        .createNetworkContainer
+            div.form-container
+            
+            div.form-container
+                form(action="/searchNetwork" method="POST").form-group
+                    input(class="inputStyleOne" name="clientName" type="text" placeholder="Search by Client Name")
+                    span                     
+                        button(type="submit" class="secondaryBtn") Go
+
+        .networkContainer
+            .inlineFlex.networkHeader
+                p.networkDetails Client Name
+                p.networkDetails Business Name
+                p.networkDetails Role
+                p.networkDetails Phone #
+                p.networkDetails Email
+                p.networkDetails Meeting Notes
+            - for (let i = 0; i < networkDetails.length; i++)
+                hr
+                .inlineFlex
+                    a.networkDetails(href=`/networks/${networkDetails[i].dataValues.id}`) #{networkDetails[i].dataValues.clientName}
+                    p.networkDetails #{networkDetails[i].dataValues.businessName}
+                    p.networkDetails #{networkDetails[i].dataValues.roleAtBusiness}
+                    p.networkDetails #{networkDetails[i].dataValues.phone}
+                    p.networkDetails #{networkDetails[i].dataValues.email}
+                    p.networkDetails #{networkDetails[i].dataValues.notes}
+                

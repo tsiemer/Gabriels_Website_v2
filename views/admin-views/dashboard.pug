@@ -1,80 +1,21 @@
 extends ../admin-layout
 
 block content
-    .sidebarContainer
-        include ./components/sidebar
-    .dashboardImageHeader.center
-        p.headerText Dashboard
+    .dashboardImageHeader
+        h1.headerText Dashboard
     .Container
-        .cardsContainer
-            .editsContainer.purple
-                .aboutMeForm
-                    h3.headerText About Me
-                    form(method="POST" action="/aboutMe")
-                        div(class="form-group")
-                            input(type="text" name="blogType" class="form-control hidden" id="blogType" value="aboutMe" readonly)
-                        div(class="form-group")
-                            input(type="text" name="title" class="form-control" id="title" placeholder="Title" required)
-                            input(type="text" class="form-control" name="subtitle" id="subtitle" placeholder="Subtitle")
-                        div(class="form-group")
-                            textarea(type="text" class="form-control" name="content" id="content" placeholder="Content")
-                        div(class="form-group")
-                            input(type="text" class="form-control" name="imgUrl" id="img-url" value="NULL" placeholder="Image Url")
-                        div(class="loginBtnContainer")
-                            button(type="submit" class="btn submitBtn") Add new
-
-            .editsContainer
-                p.extendedText This is where you create new Blogs!
-
-            .editsContainer.red
-                .myThoughtsForm
-                    h3.headerText My Thoughts
-                    form(method="POST" action="/myThoughts")
-                        div(class="form-group")
-                            input(type="text" name="blogType" class="form-control hidden" id="blogType" value="myThoughts" readonly)
-                        div(class="form-group")
-                            input(type="text" name="title" class="form-control" id="title" placeholder="Title" required)
-                            input(type="text" class="form-control" name="subtitle" id="subtitle" placeholder="Subtitle")
-                        div(class="form-group")
-                            input(type="text" class="form-control" name="imgUrl" id="imgUrl" placeholder="Image Url")
-                        div(class="form-group")
-                            textarea(type="text" class="form-control" name="content" id="content" placeholder="Content")
-                        div(class="btnContainer")
-                            button(type="submit" class="btn secondaryBtn") Add new
-
-            .editsContainer.grey
-                .projectsBoardForm
-                    h3.headerText Projects Board
-                    form(method="POST" action="/doneAndDoing")
-                        div(class="form-group")
-                            input(type="text" name="blogType" class="form-control hidden" id="blogType" value="doneAndDoing" readonly)
-                        div(class="form-group")
-                            input(type="text" name="title" class="form-control" id="title" placeholder="Title" required)
-                        div(class="form-group")
-                            textarea(type="text" class="form-control" name="content" id="content" placeholder="Content")
-                        div(class="form-group")
-                            input(type="text" class="form-control" name="imgUrl" id="img-url" placeholder="Image Url")
-                        button(type="submit" class="btn submitBtn") Add new
-
-            .editsContainer.green
-                .myInterestsForm
-                    h3.headerText My Interests
-                    form(method="POST" action="/foodForThought")
-                        div(class="form-group")
-                            input(type="text" name="blogType" class="form-control hidden" id="blogType" value="foodForThought" readonly)
-                        div(class="form-group")
-                            input(type="text" name="title" class="form-control" id="title" placeholder="Title" required)
-                            input(type="text" class="form-control" name="imgUrl" id="img-url" placeholder="Image Url")
-                        div(class="form-group")
-                            textarea(type="text" class="form-control" name="content" id="content" placeholder="Content")
-                        button(type="submit" class="btn secondaryBtn") Add new
-
-            .editsContainer.darkblue
-                .inspiringQuotesForm
-                    h3.headerText Inspiring Quotes
-                    form(method="POST" action="/wayIDoThings")
-                        div(class="form-group")
-                            input(type="text" name="blogType" class="form-control hidden" id="blogType" value="wayIDoThings" readonly)
-                        div(class="form-group")
-                            input(type="text" name="quote" class="form-control" id="quote" placeholder="Quote")
-                        button(type="submit" class="btn secondaryBtn") Add new
+        .dashboard-sections-container
+            div.dashboard-section  
+                h3 Networks
+                - for(var i = 0; i < networkDetails.length; i++)
+                    p #{networkDetails[i].dataValues.clientName}
+            
+            div.dashboard-section  
+                h3 Blogs
+                - for(var i = 0; i < blogDetails.length; i++)
+                    p #{blogDetails[i].dataValues.title}
+            
+            div.dashboard-section  
+                h3 Projects
+                - for(var i = 0; i < projectDetails.length; i++)
+                    p #{projectDetails[i].dataValues.title}

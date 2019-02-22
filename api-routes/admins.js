@@ -16,11 +16,15 @@ module.exports = function(app, db) {
 
     app.post('/login', passport.authenticate(
         'adminRoute', {
-            failureRedirect: '/',
+            failureRedirect: '/login/errMessage',
             successRedirect: `/dashboard/`
         }
     ));
    
+    app.get('/login/errMessage', (req, res, next) => {
+        res.render('login', { errMessage: 'You were not recognised as an admin.'});
+    })
+    
     app.get('/register', (req, res, next) => {
         res.render('register');
     })
@@ -53,7 +57,18 @@ module.exports = function(app, db) {
     });
 
     app.get('/dashboard',  function(req, res) {
-        res.render('admin-views/dashboard');
+        db.Network.findAll({ }).then((result) => {
+            const networkDetails = result;
+            db.Project.findAll({ }).then((result)=>{
+                const projectDetails = result;
+                db.Blog.findAll({ }).then((result) =>{
+                    const blogDetails = result;
+                    res.render('admin-views/dashboard', {networkDetails, projectDetails, blogDetails});
+                })
+            })
+        })
+        const projectDetails = db.Project.findAll({});
+        const blogDetails = db.Blog.findAll({});
     });
     
     // app.get('/dashboard/:id', function(req, res) {

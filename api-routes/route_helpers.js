@@ -12,7 +12,7 @@ const ensureOnlyAdmin = (app, db) => {
     return (req, res, next) => {
         db.Admin.findOne({
             where: {
-                id: req.session.passport.user
+                id: req.params.adminId
             }
         }).then(function(result){
             if(result === null || result === undefined) {

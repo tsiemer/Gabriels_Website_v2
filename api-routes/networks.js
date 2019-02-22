@@ -26,4 +26,32 @@ module.exports = function(app, db) {
             res.redirect('/networks/all');
         })
     });
+    
+    // Search functionality
+    app.post('/searchNetwork', (req, res, next) => {
+        db.Network.findOne({
+            where:{
+                clientName: req.body.clientName
+            }
+        }).then(function(result){
+            console.log(result)
+            res.redirect(`/networks/all/${result.clientName}`)
+        })
+    });
+
+    app.get('/networks/all/:clientName', (req, res, next) => {
+        db.Network.findAll({
+            where:{
+                clientName: req.params.clientName
+            }
+        }).then(function(result){
+            if(!result || result == null) {
+                res.redirect('/networks/all')
+            } else {
+                res.render('admin-views/networks', {networkDetails: result});
+            }
+        });
+    });
+
+    
 };

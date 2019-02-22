@@ -2,79 +2,115 @@
 
 
 @media screen and (max-width:600px) {
-    .Content_Block {
-        max-width: 80vw ;
-        margin:0px 10vw 0px 10vw ;
-        .content_blocks {
+    .Done_And_Doing {
+        background-color:$secondary-light-color;
+        height:auto;
+    
+        .sections-container {
+            max-width: 80vw;
             display:flex;
             flex-wrap:wrap;
-        }
-        .info_section {
-            order:2;
-            width:80vw ;
-
-            .description {
-                max-width:80vw;
+            margin:0px auto;
+    
+            .section {
+                margin:40px 20px;
+                position: relative;
+                flex:1;
+            
+                &:hover .section-content {
+                    display:block !important;
+                    width: 100%;
+                    left: 0;
+                    color:white;
+                }
+            
+                .section-image {
+                  display: block;
+                  width: 100%;
+                  height: auto;
+                }
+                
+                .section-content {
+                    display:none !important;
+                    position: absolute;
+                    bottom: 0;
+                    left: 100%;
+                    right: 0;
+                    background-color:rgba(#333, 0.4);   
+                    overflow: hidden;
+                    width: 0;
+                    height: 100%;
+                    transition: .5s ease;
+            
+                  .section-text {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    -webkit-transform: translate(-50%, -50%);
+                    -ms-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+                    white-space: nowrap;
+                  }
+                }
             }
-        }
-
-        .content_block_image{
-            flex:1;
-            width:80vw ;
-            height:80vw ;
         }
     }
 }
 
-.Done_And_Doing {
-    background-color:$secondary-light-color;
-    height:auto;
-    padding-bottom:50px;
 
-    .Content_Block {
-        max-width:60vw;
+
+
+@media screen and (min-width:650px){
+    
+    .Done_And_Doing {
+        background-color:$secondary-light-color;
         height:auto;
-        margin:0px 20vw 0px 20vw;
-        padding:15px 0px;
-        display:flex;
-        flex-wrap:wrap;
-        
-
-        .info_section {
-            flex:2;
-        }
-
-        .header_link {
-            font-size:24px;
-            line-height:35px;
-            text-align:left;
-        }
-
-        .subtitle {
-            color: $primary-text-color;
-            text-align:left;
-        }
-
-        .description{
-            color:$description_color;
-            font-size:$description_size;
-            line-height: 22px;
-            text-align:left;
-            max-width:38vw;
-
-            &-noImg{
-                text-align:center;
-                line-height:28px;
-                font-size:18px;
-                padding:0px 0px 30px 0px;
-            }
-        }
-
-        .content_block_image{
-            flex:1;
-            width:20vw;
-            height:20vw;
-            margin-right:40px;
+    
+        .sections-container {
+            max-width: 80vw;
+            display:flex;
+            flex-wrap:wrap;
+            margin:0px auto;
+    
+            .section {
+                margin:40px 20px;
+                position: relative;
+                flex:1;
+            
+                &:hover .section-content {
+                    width: 100%;
+                    left: 0;
+                    color:white;
+                }
+            
+                .section-image {
+                  display: block;
+                  width: 100%;
+                  height: auto;
+                }
+                
+                .section-content {
+                  position: absolute;
+                  bottom: 0;
+                  left: 100%;
+                  right: 0;
+                  background-color:rgba(#333, 0.4);   
+                  overflow: hidden;
+                  width: 0;
+                  height: 100%;
+                  transition: .5s ease;
+            
+                  .section-text {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    -webkit-transform: translate(-50%, -50%);
+                    -ms-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+                    white-space: nowrap;
+                  }
+                }
+              }
         }
     }
 }

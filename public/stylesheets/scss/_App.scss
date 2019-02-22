@@ -8,43 +8,43 @@ html, body{
   padding:0px;
 }
 
+
+// padding between the sections on homepage
+.section-container{
+  padding: 0px 0px 120px 0px;
+}
+
+// name tag on quotes and current thoughts section
+.nameTag{
+  width:100%;
+  text-align:right;
+  font-size:18px;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
 form{
   width:100%;
   input, textarea{ width:100%; margin:0px;}
 }
 
 .inputStyleOne{
-  width:60%;
   height:50px;
   background-color:$secondary-light-color;
   border:none;
   border-bottom: solid 1px $secondary-light-color;
   border-radius:0px;
   padding:0px 10px;
-  margin:20px 0px;
 
   &:focus{
       border-bottom: solid 1px $primary-text-color;
   }
 }
 
-  
+
 .Main {
   z-index:inherit 1010;
-  width: 100vw;
-  height: 100vh;
   font-family: "Roboto", sans-serif;
   text-align: center;
-}
-
-.messageContainer{
-  padding:100px 50px; 
-  max-width:800px;
-  max-height:80vh;
-  margin:20px auto;
-  text-align:center;
-  background-color:$secondary-light-color;
-  color:black;
 }
 
 .gabriel_Background {
@@ -58,7 +58,9 @@ form{
 }
 
 .blue_Background {
-  background-image: url("../../images/Royal-Blue-Background.jpg");
+  // background-image: url("../../images/Royal-Blue-Background.jpg");
+  background-image: url("https://images.pexels.com/photos/281260/pexels-photo-281260.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
+  // background-image: url("https://images.pexels.com/photos/1154739/pexels-photo-1154739.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -68,12 +70,19 @@ form{
 
 .section-title-container {
   display:inline-flex;
-  margin-top:80px;
+  padding:80px 0px 20px;
 
-  h2, h3{
+  h2{
     color:$primary-text-color;
     padding:5px;
     font-weight:bolder;
+  }
+
+  h3{
+    color:whitesmoke;
+    padding:5px;
+    font-weight:bolder;
+
   }
 
   hr{
@@ -84,22 +93,21 @@ form{
     border:solid $primary-text-color 0.7px;
     margin-top:38px;
   }
+
+  .secondary_hr {
+    width:$main_hr_width;
+    height:1px;
+    background-color:whitesmoke;
+    color:whitesmoke;
+    border:solid whitesmoke 0.7px;
+    margin-top: 38px;
+  }
   
 }
 
 .contact-me-hr{
   margin-top:-100px;
 }
-
-.secondary_hr {
-  width:$main_hr_width;
-  height:1px;
-  background-color:$primary-light-color;
-  color:$primary-light-color;
-  border:solid $primary-light-color 0.7px;
-  margin-top: 38px;
-}
-
 
 
 
@@ -109,6 +117,16 @@ form{
   width:100%;
   text-align:center;
 
+  &.multiple{
+    display:flex;
+    flex-wrap:wrap;
+
+    a, button{
+      flex:1;
+      margin:10px 5px;
+    }
+  }
+
   .back-button{
     position:relative;
     margin:0px 10px;
@@ -117,7 +135,6 @@ form{
     background-color:$primary-color;
     color:$primary-light-color;
     padding:10px;
-    border-radius:5px;
     transition: 0.2s;
 
     &:hover{
@@ -135,7 +152,8 @@ form{
 }
 
 .btnsContainer{
-  width:80%;
+  width:100%;
+  display:flex;
 
   .left{
     margin-left:60px;
@@ -147,7 +165,8 @@ form{
 }
 
 .submitBtn{
-  padding:12px 150px;
+  flex:1;
+  padding:12px;
   margin:0px auto;
   background-color:#8187b1;
   color:$primary-light-color;
@@ -168,6 +187,7 @@ form{
   background-color:$primary-text-color;
   color:$primary-light-color;
   font-size:15px;
+  line-height:1.8;
   border-radius:0px;
   transition:.5s;
 

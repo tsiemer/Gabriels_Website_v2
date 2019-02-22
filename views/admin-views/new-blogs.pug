@@ -1,0 +1,81 @@
+extends ../admin-layout
+
+block content
+    .dashboardImageHeader.center
+        p.headerText Dashboard
+    .Container
+        .cardsContainer
+            .editsContainer
+                .aboutMeForm
+                    h3.headerText About Me
+                    form(method="POST" action="/aboutMe")
+                        div(class="form-group")
+                            input(type="text" name="blogType" class="form-control hidden" id="blogType" value="aboutMe" readonly)
+                        div(class="form-group")
+                            input(type="text" name="title" class="inputStyleOne" id="title" placeholder="Title" required)
+                            input(type="text" class="inputStyleOne" name="subtitle" id="subtitle" placeholder="Subtitle")
+                        div(class="form-group")
+                            textarea(type="text" class="inputStyleOne" name="content" id="content" placeholder="Content")
+                        div(class="form-group")
+                            input(type="text" class="inputStyleOne" name="imgUrl" id="img-url" placeholder="Image Url")
+                        div(class="btnsContainer")
+                            button(type="submit" class="submitBtn") Add
+
+            .editsContainer
+                p.extendedText Create new blogs here!
+
+            .editsContainer
+                .myThoughtsForm
+                    h3.headerText My Thoughts
+                    form(method="POST" action="/myThoughts")
+                        div(class="form-group")
+                            input(type="text" name="blogType" class="inputStyleOne hidden" id="blogType" value="myThoughts" readonly)
+                        div(class="form-group")
+                            input(type="text" name="title" class="inputStyleOne" id="title" placeholder="Title" required)
+                            input(type="text" class="inputStyleOne" name="subtitle" id="subtitle" placeholder="Subtitle")
+                        div(class="form-group")
+                            input(type="text" class="inputStyleOne" name="imgUrl" id="imgUrl" placeholder="Image Url")
+                        div(class="form-group")
+                            textarea(type="text" class="inputStyleOne" name="content" id="content" placeholder="Content")
+                        div(class="btnsContainer")
+                            button(type="submit" class="submitBtn") Add
+
+            .editsContainer
+                .projectsBoardForm
+                    h3.headerText Projects Board
+                    form(method="POST" action="/doneAndDoing")
+                        div(class="form-group")
+                            input(type="text" name="blogType" class="inputStyleOne hidden" id="blogType" value="doneAndDoing" readonly)
+                        div(class="form-group")
+                            input(type="text" name="title" class="inputStyleOne" id="title" placeholder="Title" required)
+                        div(class="form-group")
+                            textarea(type="text" class="inputStyleOne" name="content" id="content" placeholder="Content")
+                        div(class="form-group")
+                            input(type="text" class="inputStyleOne" name="imgUrl" id="img-url" placeholder="Image Url")
+                        div(class="btnsContainer")
+                            button(type="submit" class="submitBtn") Add
+
+            .editsContainer
+                .myInterestsForm
+                    h3.headerText My Interests
+                    form(method="POST" action="/foodForThought")
+                        div(class="form-group")
+                            input(type="text" name="blogType" class="inputStyleOne hidden" id="blogType" value="foodForThought" readonly)
+                        div(class="form-group")
+                            input(type="text" name="title" class="inputStyleOne" id="title" placeholder="Title" required)
+                            input(type="text" class="inputStyleOne" name="imgUrl" id="img-url" placeholder="Image Url")
+                        div(class="form-group")
+                            textarea(type="text" class="inputStyleOne" name="content" id="content" placeholder="Content")
+                        div(class="btnsContainer")
+                            button(type="submit" class="submitBtn") Add
+
+            .editsContainer
+                .inspiringQuotesForm
+                    h3.headerText Inspiring Quotes
+                    form(method="POST" action="/wayIDoThings")
+                        div(class="form-group")
+                            input(type="text" name="blogType" class="inputStyleOne hidden" id="blogType" value="wayIDoThings" readonly)
+                        div(class="form-group")
+                            input(type="text" name="quote" class="inputStyleOne" id="quote" placeholder="Quote")
+                        div(class="btnsContainer")
+                            button(type="submit" class="submitBtn") Add

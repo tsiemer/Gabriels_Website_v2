@@ -1,32 +1,47 @@
 @import '../_variables';
 
 
-@media screen and (max-width:350px) {
+@media screen and (max-width:650px) {
     .FoodForThought {
+        display:none;
+        background-color: $primary-light-color;
         .pinterest-container{
+            max-height:800px;
+            margin:0px 20px;
+            display:flex;
+            flex-flow: column wrap;
+            align-content: center;
+            overflow:scroll;
             column-count:2;
             
-        }
+            .pinterest-grid{
+                margin:5px;
     
+                .grid-img {
+                    width:300px;
+                }
+            }
+        }
     }
 }
 
-.FoodForThought {
-    background-color: $primary-light-color;
-    padding-bottom:60px;
-    .pinterest-container{
-        max-height:800px;
-        margin:0px 20px;
-        display:flex;
-        flex-flow: column wrap;
-        align-content: center;
-        column-count:4;
-        
-        .pinterest-grid{
-            margin:5px;
-
-            .grid-img {
-                width:300px;
+@media screen and (min-width:650px){
+    .FoodForThought {
+        background-color: $primary-light-color;
+        .pinterest-container{
+            max-height:800px;
+            margin:0px 20px;
+            display:flex;
+            flex-flow: column wrap;
+            align-content: center;
+            column-count:4;
+            
+            .pinterest-grid{
+                margin:5px;
+    
+                .grid-img {
+                    width:300px;
+                }
             }
         }
     }
